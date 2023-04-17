@@ -19,7 +19,14 @@ set cursorline     "突出显示当前行
 set cursorcolumn   "突出显示当前列
 "" set fdm=marker 设置代码折叠
 colo desert  "主题色黑色 
-if has("gui_running")
-  set guifont=Consolas:h10
+# windows字体大小
+if has("windows")
+  let dpi = str2nr(strpart(matchstr(substitute(
+    \system('wmic desktopmonitor get PixelsPerXLogicalInch /value'),
+    \'\%x01\|\%x0a\|\%x0a\|\%xff\|\%xfe', '', 'g'),
+    \'=.*$'), 1))/10
+  if dpi > 10
+    let &guifont="Consolas:h".dpi
+  endif
 endif
 
