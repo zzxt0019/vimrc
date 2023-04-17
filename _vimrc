@@ -19,7 +19,7 @@ set cursorline     "突出显示当前行
 set cursorcolumn   "突出显示当前列
 "" set fdm=marker 设置代码折叠
 colo desert  "主题色黑色 
-# windows字体大小
+" windows字体大小
 if has("windows")
   let dpi = str2nr(strpart(matchstr(substitute(
     \system('wmic desktopmonitor get PixelsPerXLogicalInch /value'),
