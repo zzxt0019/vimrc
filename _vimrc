@@ -15,7 +15,7 @@ set nobackup noswapfile noundofile
 "设置匹配模式 类似当输入一个左括号时会匹配相应的那个右括号
 set showmatch
 set clipboard^=unnamed,unnamedplus
-set cursorline     "突出显示当前行
+"" set cursorline     "突出显示当前行
 "" set cursorcolumn   "突出显示当前列
 "" set fdm=marker 设置代码折叠
 colo desert  "主题色黑色 
