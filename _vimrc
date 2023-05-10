@@ -1,4 +1,4 @@
-source $VIMRUNTIME/vimrc_example.vim
+source $VIM/mitvimrc
 syntax on "语法高亮
 set number relativenumber "显示行号
 set ruler wrap "显示光标所在位置的行号和列号
