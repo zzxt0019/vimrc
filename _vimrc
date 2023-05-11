@@ -13,7 +13,6 @@ set clipboard^=unnamed,unnamedplus "系统剪切板
 "" set cursorline     "突出显示当前行
 "" set cursorcolumn   "突出显示当前列
 "" set fdm=marker 设置代码折叠
-colo desert  "主题色黑色 
 set mouse=c
 
 
@@ -35,3 +34,4 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
 Plug 'tomasr/molokai'
 call plug#end()
+colo molokai
