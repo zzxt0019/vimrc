@@ -1,4 +1,5 @@
-source $VIM/mitvimrc
+source $VIM/mit_vimrc
+source $VIM/map_vimrc
 syntax on "语法高亮
 set number relativenumber "显示行号
 set ruler wrap "显示光标所在位置的行号和列号
@@ -32,5 +33,5 @@ endif
 call plug#begin()
 Plug 'tpope/vim-surround'
 Plug 'preservim/nerdtree'
+Plug 'tomasr/molokai'
 call plug#end()
-
