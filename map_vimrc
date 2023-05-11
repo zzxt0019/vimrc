@@ -1,1 +1,4 @@
-nnoremap <c-n> :NERDTreeFind<CR>
+nnoremap <a-n><a-n> :NERDTree<CR>
+nnoremap <a-n><a-f> :NERDTreeFind<CR>
+nnoremap <a-n><a-t> :NERDTreeToggle<CR>
+nnoremap <a-n><a-m> :NERDTreeMirror<CR>
