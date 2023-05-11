@@ -1,11 +1,11 @@
-source $VIM/mit_vimrc
+" source $VIM/mit_vimrc
 source $VIM/map_vimrc
 syntax on "语法高亮
 set number relativenumber "显示行号
 set ruler wrap "显示光标所在位置的行号和列号
 "" set shiftwidth=4 tabstop=4 softtabstop=4
 set expandtab "将tab替换为相应数量空格
-set smartindent
+set smartindent "缩进
 "" set backspace=2
 set nobackup noswapfile noundofile "设置取消备份 禁止临时文件生成
 set showmatch "设置匹配模式 类似当输入一个左括号时会匹配相应的那个右括号
