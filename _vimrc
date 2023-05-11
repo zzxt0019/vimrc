@@ -25,6 +25,7 @@ if has("windows") && has("gui_running")
   if dpi > 10
     let &guifont="Consolas:h".dpi
   endif
+  set columns=120 "设置宽度
 endif
 
 " ====== Windows字体大小 ====== "
