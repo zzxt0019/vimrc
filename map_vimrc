@@ -1,4 +1,16 @@
-nnoremap <a-n><a-n> :NERDTree<CR>
-nnoremap <a-n><a-f> :NERDTreeFind<CR>
-nnoremap <a-n><a-t> :NERDTreeToggle<CR>
-nnoremap <a-n><a-m> :NERDTreeMirror<CR>
+" NERDTree 快捷键映射 "
+nnoremap <c-n><c-n> :NERDTree<CR>
+nnoremap <c-n><c-f> :NERDTreeFind<CR>
+nnoremap <c-n><c-t> :NERDTreeToggle<CR>
+nnoremap <c-n><c-m> :NERDTreeMirror<CR>
+
+
+" 移动窗口 "
+map <c-h> <c-w>h
+map <c-j> <c-w>j
+map <c-k> <c-w>k
+map <c-l> <c-w>l
+
+" HL映射^$行首行尾 "
+noremap H ^
+noremap L $
