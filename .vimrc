@@ -1,4 +1,5 @@
 source $VIMRUNTIME/vimrc_example.vim
+source $VIM/plug.vimrc
 source $VIM/map.vimrc
 " 取消兼容模式
 set nocompatible 
@@ -28,7 +29,7 @@ set incsearch
 set mouse+=a
 " 不显示默认启动信息
 set shortmess+=I
-
+colo molokai
 
 " ====== Windows字体大小 ====== "
 if has("windows") && has("gui_running")
@@ -44,9 +45,3 @@ endif
 
 " ====== Windows字体大小 ====== "
 
-call plug#begin()
-Plug 'tpope/vim-surround'
-Plug 'preservim/nerdtree'
-Plug 'tomasr/molokai'
-call plug#end()
-colo molokai
