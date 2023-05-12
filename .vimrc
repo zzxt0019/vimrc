@@ -25,6 +25,8 @@ set clipboard^=unnamed,unnamedplus
 set ignorecase smartcase 
 " 搜索实时展示
 set incsearch
+" 禁用报警
+set noerrorbells novisualbell t_vb=
 " 启用鼠标
 set mouse+=a
 " 不显示默认启动信息
