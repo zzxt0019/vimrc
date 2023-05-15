@@ -22,16 +22,10 @@ set showmatch
 " 系统剪切板
 set clipboard^=unnamed,unnamedplus
 " 搜索大小写
-set ignorecase smartcase 
-" 搜索实时展示
-set incsearch
-" 禁用报警
-set noerrorbells novisualbell t_vb=
-" 启用鼠标
 set mouse+=a
 " 不显示默认启动信息
 set shortmess+=I
-colo molokai
+colo gruvbox
 
 " ====== Windows字体大小 ====== "
 if has("windows") && has("gui_running")

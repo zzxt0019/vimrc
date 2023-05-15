@@ -3,8 +3,11 @@ set encoding=utf-8 fileencodings=utf-8
 set clipboard^=unnamed,unnamedplus
 " 相对行号 "
 set number relativenumber
+" 搜索大小写 "
+set ignorecase smartcase 
 
 set surround
 set NERDTree
+set easymotion
 source ~/map.vimrc
 
