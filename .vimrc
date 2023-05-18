@@ -25,7 +25,9 @@ set clipboard^=unnamed,unnamedplus
 set mouse+=a
 " 不显示默认启动信息
 set shortmess+=I
+" 主题色
 colo gruvbox
+set bg=dark
 
 " ====== Windows字体大小 ====== "
 if has("windows") && has("gui_running")
