@@ -9,5 +9,10 @@ set ignorecase smartcase
 set surround
 set NERDTree
 set easymotion
+set commentary
+set multiple-cursors
 source ~/map.vimrc
+
+" idea Action "
+map <leader>rn <Action>(RenameElement)
 
