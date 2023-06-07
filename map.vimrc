@@ -1,5 +1,5 @@
 " leader映射 "
-let g:mapleader=";"
+let g:mapleader="'"
 
 
 " MIT 推荐 - 禁用方向键 "
@@ -30,14 +30,15 @@ nnoremap S "_S
 nnoremap x "_x
 nnoremap X "_X
 
-" 自定义映射: NERDTree 快捷键 "
+" 映射: NERDTree 快捷键 "
 nnoremap <leader>nn :NERDTree<CR>
 nnoremap <leader>nf :NERDTreeFind<CR>
 nnoremap <leader>nt :NERDTreeToggle<CR>
 nnoremap <leader>nm :NERDTreeMirror<CR>
 
 
-" 自定义映射: 全局替换全角空格为2个半角空格 "
+" 映射: 全局替换全角空格为2个半角空格 "
 nnoremap <leader><leader><space><space> :%s/　/  /g<CR>
 
-
+" Insert模式ESC映射 "
+inoremap jk <ESC>
