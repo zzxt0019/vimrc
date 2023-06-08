@@ -5,6 +5,8 @@ set clipboard^=unnamed,unnamedplus
 set number relativenumber
 " 搜索大小写 "
 set ignorecase smartcase 
+" 搜索高亮 "
+set hlsearch incsearch
 
 set surround
 set NERDTree
@@ -14,5 +16,6 @@ set multiple-cursors
 source ~/map.vimrc
 
 " idea Action "
-map <leader>rn <Action>(RenameElement)
+map <leader>ren <Action>(RenameElement)<backspace>
+map <leader>var <Action>(IntroduceVariable)<backspace>
 

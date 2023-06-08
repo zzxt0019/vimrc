@@ -40,6 +40,9 @@ cnoremap <c-j> <down>
 cnoremap <c-k> <up>
 cnoremap <c-l> <right>
 
+" 清空搜索 "
+nnoremap <leader>/ :let @/ = ""<cr>
+
 " NERDTree映射 "
 nnoremap <leader>nn :NERDTree<cr>
 nnoremap <leader>nf :NERDTreeFind<cr>
