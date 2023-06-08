@@ -52,7 +52,8 @@ nnoremap <leader>nm :NERDTreeMirror<cr>
 " easymotion映射 "
 let g:EasyMotion_do_mapping = 0 " 禁用默认映射
 let g:EasyMotion_smartcase = 1 " 忽略大小写
-nmap <leader>s <Plug>(easymotion-overwin-s)
+nnoremap <leader>f <Plug>(easymotion-bd-f)
+nnoremap <leader>t <Plug>(easymotion-bd-t)
 
 
 " 临时-映射: 全局替换全角空格为2个半角空格 "
