@@ -1,19 +1,15 @@
-set encoding=utf-8 fileencodings=utf-8
-" 系统剪切板 "
-set clipboard^=unnamed,unnamedplus
-" 相对行号 "
-set number relativenumber
-" 搜索大小写 "
-set ignorecase smartcase 
-" 搜索高亮 "
-set hlsearch incsearch
+source ~/base.vimrc
+source ~/mapping.vimrc
 
 set surround
 set NERDTree
 set easymotion
 set commentary
 set multiple-cursors
-source ~/map.vimrc
+
+" IdeaVim-Extension 切换输入法 "
+let context_aware=0
+set keep-english-in-normal-and-restore-in-insert
 
 " IdeaVim-easymotion "
 " 覆盖自定义<Plug>映射, 尽量保持同步 "
@@ -25,4 +21,3 @@ map <leader>T <leader><leader>T
 " idea Action "
 map <leader>ren <Action>(RenameElement)<backspace>
 map <leader>var <Action>(IntroduceVariable)<backspace>
-
