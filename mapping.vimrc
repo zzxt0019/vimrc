@@ -1,5 +1,6 @@
 " leader映射 "
 let g:mapleader="'"
+map ' <nop>
 
 " MIT 推荐 - 禁用方向键 "
 nnoremap <left>  <nop>
