@@ -1,6 +1,8 @@
 " leader映射 "
 let g:mapleader="'"
-map ' <nop>
+" 取消当前leader键的原始功能 "
+noremap ' <nop>
+noremap '' <nop>
 
 " MIT 推荐 - 禁用方向键 "
 nnoremap <left>  <nop>
@@ -28,10 +30,10 @@ noremap X "_X
 inoremap jk <esc>
 
 " 快速移动 "
-noremap <c-h> <left>
-noremap <c-j> <down>
-noremap <c-k> <up>
-noremap <c-l> <right>
+noremap  <c-h> <left>
+noremap  <c-j> <down>
+noremap  <c-k> <up>
+noremap  <c-l> <right>
 inoremap <c-h> <left>
 inoremap <c-j> <down>
 inoremap <c-k> <up>
