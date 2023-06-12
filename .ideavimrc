@@ -12,5 +12,5 @@ let context_aware=0
 set keep-english-in-normal-and-restore-in-insert
 
 " idea Action "
-noremap <leader><leader>ren :action RenameElement<cr><esc><right>
-noremap <leader><leader>var :action IntroduceVariable<cr><esc>
+nnoremap <leader><leader>ren <esc>:action RenameElement<cr><esc><right>
+nnoremap <leader><leader>var <esc>:action IntroduceVariable<cr><esc>

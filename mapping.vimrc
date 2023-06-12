@@ -42,13 +42,13 @@ cnoremap <c-k> <up>
 cnoremap <c-l> <right>
 
 " 清空搜索 "
-nnoremap <leader>/ :let @/ = ""<cr>
+nnoremap <leader>/ <esc>:let @/ = ""<cr>
 
 " NERDTree映射 "
-nnoremap <leader>nn :NERDTree<cr>
-nnoremap <leader>nf :NERDTreeFind<cr>
-nnoremap <leader>nt :NERDTreeToggle<cr>
-nnoremap <leader>nm :NERDTreeMirror<cr>
+nnoremap <leader>nn <esc>:NERDTree<cr>
+nnoremap <leader>nf <esc>:NERDTreeFind<cr>
+nnoremap <leader>nt <esc>:NERDTreeToggle<cr>
+nnoremap <leader>nm <esc>:NERDTreeMirror<cr>
 
 " easymotion映射 "
 let g:EasyMotion_do_mapping = 0 " 禁用默认映射
@@ -58,4 +58,4 @@ map <leader>t <Plug>(easymotion-bd-t)
 
 
 " 临时-映射: 全局替换全角空格为2个半角空格 "
-nnoremap <leader><leader><space><space> :%s/　/  /g<cr>
+nnoremap <leader><leader><space><space> <esc>:%s/　/  /g<cr>
