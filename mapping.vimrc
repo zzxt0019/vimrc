@@ -1,7 +1,7 @@
 " leader映射 "
 let g:mapleader="'"
 " 取消当前leader键的原始功能 "
-noremap ' <nop>
+noremap '  <nop>
 noremap '' <nop>
 
 " MIT 推荐 - 禁用方向键 "
