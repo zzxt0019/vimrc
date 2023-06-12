@@ -12,5 +12,14 @@ let context_aware=0
 set keep-english-in-normal-and-restore-in-insert
 
 " idea Action "
+" 重命名 "
 nnoremap <leader><leader>ren <esc>:action RenameElement<cr><esc><right>
+" 引入变量 "
 nnoremap <leader><leader>var <esc>:action IntroduceVariable<cr><esc>
+" 前往下个报错 "
+nnoremap <leader><leader>erj <esc>:action GotoNextError<cr>
+nnoremap <leader><leader>err <esc>:action GotoNextError<cr>
+" 前往上个报错 "
+nnoremap <leader><leader>erk <esc>:action GotoPreviousError<cr>
+" 包围 "
+vnoremap <leader><leader>sur <esc>:action SurroundWith<cr>
