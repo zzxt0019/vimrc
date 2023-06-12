@@ -14,11 +14,11 @@ inoremap <right> <nop>
 inoremap <up>    <nop>
 inoremap <down>  <nop>
 
-" 映射: HL ^$ 行首行尾 "
+" HL映射行首行尾^$ "
 noremap H ^
 noremap L $
 
-" 映射: c s x删除的内容不进入默认缓存 "
+" c s x删除的内容不进入默认缓存 "
 noremap c "_c
 noremap C "_C
 noremap s "_s
@@ -26,10 +26,10 @@ noremap S "_S
 noremap x "_x
 noremap X "_X
 
-" 映射: Insert模式 jk 退出 "
+" Insert模式 jk 退出 "
 inoremap jk <esc>
 
-" 快速移动 "
+" 全模式 映射方向键 "
 noremap  <c-h> <left>
 noremap  <c-j> <down>
 noremap  <c-k> <up>
@@ -42,15 +42,23 @@ cnoremap <c-h> <left>
 cnoremap <c-j> <down>
 cnoremap <c-k> <up>
 cnoremap <c-l> <right>
+tnoremap <c-h> <left>
+tnoremap <c-j> <down>
+tnoremap <c-k> <up>
+tnoremap <c-l> <right>
+lnoremap <c-h> <left>
+lnoremap <c-j> <down>
+lnoremap <c-k> <up>
+lnoremap <c-l> <right>
 
 " 清空搜索 "
-nnoremap <leader>/ <esc>:let @/ = ""<cr>
+noremap <leader>/ <esc>:let @/ = ""<cr>
 
 " NERDTree映射 "
-nnoremap <leader>nn <esc>:NERDTree<cr>
-nnoremap <leader>nf <esc>:NERDTreeFind<cr>
-nnoremap <leader>nt <esc>:NERDTreeToggle<cr>
-nnoremap <leader>nm <esc>:NERDTreeMirror<cr>
+noremap <leader>nn <esc>:NERDTree<cr>
+noremap <leader>nf <esc>:NERDTreeFind<cr>
+noremap <leader>nt <esc>:NERDTreeToggle<cr>
+noremap <leader>nm <esc>:NERDTreeMirror<cr>
 
 " easymotion映射 "
 let g:EasyMotion_do_mapping = 0 " 禁用默认映射
@@ -60,4 +68,4 @@ map <leader>t <Plug>(easymotion-bd-t)
 
 
 " 临时-映射: 全局替换全角空格为2个半角空格 "
-nnoremap <leader><leader><space><space> <esc>:%s/　/  /g<cr>
+noremap <leader><leader><space><space> <esc>:%s/　/  /g<cr>
