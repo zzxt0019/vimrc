@@ -11,13 +11,6 @@ set multiple-cursors
 let context_aware=0
 set keep-english-in-normal-and-restore-in-insert
 
-" IdeaVim-easymotion "
-" 覆盖自定义<Plug>映射, 尽量保持同步 "
-map <leader>f <leader><leader>s
-map <leader>s <leader><leader>s
-map <leader>t <leader><leader>t
-map <leader>T <leader><leader>T
-
 " idea Action "
-map <leader>ren <Action>(RenameElement)<backspace>
-map <leader>var <Action>(IntroduceVariable)<backspace>
+map <leader>ren <Action>(RenameElement)<esc>
+map <leader>var <Action>(IntroduceVariable)<esc>
