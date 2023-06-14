@@ -6,6 +6,7 @@ set NERDTree
 set easymotion
 set commentary
 set multiple-cursors
+set exchange
 
 " IdeaVim-Extension 切换输入法 "
 let context_aware=0
@@ -13,9 +14,9 @@ set keep-english-in-normal-and-restore-in-insert
 
 " idea Action "
 " 重命名 "
-nnoremap <leader><leader>ren <esc>:action RenameElement<cr><esc><right>
+nnoremap <leader><leader>ren <esc>:action RenameElement<cr>
 " 引入变量 "
-nnoremap <leader><leader>var <esc>:action IntroduceVariable<cr><esc>
+nnoremap <leader><leader>var <esc>:action IntroduceVariable<cr>
 " 前往下个报错 "
 nnoremap <leader><leader>erj <esc>:action GotoNextError<cr>
 nnoremap <leader><leader>err <esc>:action GotoNextError<cr>
