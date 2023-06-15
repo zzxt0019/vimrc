@@ -7,6 +7,8 @@ set easymotion
 set commentary
 set multiple-cursors
 set exchange
+set highlightedyank
+set ReplaceWithRegister
 
 " IdeaVim-Extension 切换输入法 "
 let context_aware=0
@@ -24,3 +26,7 @@ nnoremap <leader><leader>err <esc>:action GotoNextError<cr>
 nnoremap <leader><leader>erk <esc>:action GotoPreviousError<cr>
 " 包围 "
 vnoremap <leader><leader>sur <esc>:action SurroundWith<cr>
+
+" IdeaVim 冲突 "
+" :s匹配后清除模式寄存器无效, 改为先用/搜索一次
+noremap <leader>/ /<cr>:let @/=""<cr>

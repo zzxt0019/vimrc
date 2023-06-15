@@ -53,6 +53,11 @@ set showcmd
 colo gruvbox
 set bg=dark
 
+" ===== Plug配置 ===== "
+let g:EasyMotion_smartcase = 1
+let g:highlightedyank_highlight_duration = 2000
+" ===== Plug配置 ===== "
+
 " ====== Windows字体大小 ====== "
 if has("windows") && has("gui_running")
   let dpi = str2nr(strpart(matchstr(substitute(

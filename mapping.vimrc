@@ -70,7 +70,6 @@ noremap <leader>nm <esc>:NERDTreeMirror<cr>
 
 " easymotion映射 "
 let g:EasyMotion_do_mapping = 0 " 禁用默认映射
-let g:EasyMotion_smartcase = 1 " 忽略大小写
 map <leader>f <Plug>(easymotion-bd-f)
 map <leader>t <Plug>(easymotion-bd-t)
 
