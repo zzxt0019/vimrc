@@ -14,19 +14,23 @@ set ReplaceWithRegister
 let context_aware=0
 set keep-english-in-normal-and-restore-in-insert
 
-" idea Action "
-" 重命名 "
-nnoremap <leader><leader>ren <esc>:action RenameElement<cr>
-" 引入变量 "
-nnoremap <leader><leader>var <esc>:action IntroduceVariable<cr>
-" 前往下个报错 "
-nnoremap <leader><leader>erj <esc>:action GotoNextError<cr>
-nnoremap <leader><leader>err <esc>:action GotoNextError<cr>
-" 前往上个报错 "
-nnoremap <leader><leader>erk <esc>:action GotoPreviousError<cr>
-" 包围 "
-vnoremap <leader><leader>sur <esc>:action SurroundWith<cr>
 
-" IdeaVim 冲突 "
-" :s匹配后清除模式寄存器无效, 改为先用/搜索一次
+" ===== idea Action ===== "
+" 重命名 "
+nnoremap <leader><leader>re <esc>:action RenameElement<cr>
+" 引入变量 "
+nnoremap <leader><leader>va <esc>:action IntroduceVariable<cr>
+" 新建 "
+nnoremap <leader><leader>ne <esc>:action NewElement<cr>
+nnoremap <leader><leader>nc <esc>:action NewClass<cr>
+nnoremap <leader><leader>nd <esc>:action NewDir<cr>
+" ===== idea Action ===== "
+
+
+" ===== IdeaVim BUG ===== "
+" :s匹配后清除模式寄存器无效, 改为先用/搜索一次 "
 noremap <leader>/ /<cr>:let @/=""<cr>
+" highlightedyank_highlight_duration "
+" vim的类型是number ideavim的类型是string "
+let g:highlightedyank_highlight_duration = g:highlightedyank_highlight_duration.""
+" ===== IdeaVim BUG ===== "
