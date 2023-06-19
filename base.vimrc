@@ -40,6 +40,9 @@ set hlsearch
 " 搜索动态显示
 set incsearch
 
+" 取消提示音
+set noeb vb t_vb= 
+
 " 启用鼠标
 set mouse+=a
 
