@@ -20,17 +20,11 @@ noremap L $
 sunmap  H
 sunmap  L
 
-" c s x删除的内容不进入默认缓存 "
-noremap c "_c
-noremap C "_C
+" 单个字符删除不进入缓存 "
 noremap s "_s
-noremap S "_S
 noremap x "_x
 noremap X "_X
-sunmap  c
-sunmap  C
 sunmap  s
-sunmap  S
 sunmap  x
 sunmap  X
 

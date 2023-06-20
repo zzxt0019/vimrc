@@ -43,6 +43,7 @@ set incsearch
 " 取消提示音
 set vb t_vb="|0f"
 au GuiEnter * set t_vb=
+
 " 启用鼠标
 set mouse+=a
 
@@ -70,8 +71,8 @@ if has("windows") && has("gui_running")
   if dpi > 10
     let &guifont="Consolas:h".dpi
   endif
-  set columns=100 " 设置宽度
+  set columns=120 " 设置宽度
+  set lines=30 " 设置高度
 endif
-
 " ====== Windows字体大小 ====== "
 
