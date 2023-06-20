@@ -22,6 +22,9 @@ set autoindent smartindent
 " 设置取消备份 禁止临时文件生成
 set nobackup noswapfile writebackup noundofile 
 
+" 自动读取来自外部的修改
+set autoread
+
 " 系统剪切板
 set clipboard^=unnamed,unnamedplus
 
