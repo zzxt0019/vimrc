@@ -22,6 +22,12 @@
     " 清空搜索 "
     noremap <leader>/ <esc>:let @/ = ""<cr>
 
+    " /和?智能搜索 #和*精确搜索 "
+    nnoremap / <esc>:set ignorecase smartcase<cr>/
+    nnoremap ? <esc>:set ignorecase smartcase<cr>?
+    nnoremap * <esc>:set noignorecase nosmartcase<cr>*
+    nnoremap # <esc>:set noignorecase nosmartcase<cr>#
+
 " ---------- 基础映射 ---------- "
 
 " ========== 插件映射 ========== "

@@ -19,6 +19,8 @@ nnoremap <leader><leader>va <esc>:action IntroduceVariable<cr>
 nnoremap <leader><leader>ne <esc>:action NewElement<cr>
 nnoremap <leader><leader>nc <esc>:action NewClass<cr>
 nnoremap <leader><leader>nd <esc>:action NewDir<cr>
+" 全局查找 "
+nnoremap <leader><leader>ff <esc>:action FindInPath<cr>
 " ===== idea Action ===== "
 
 
