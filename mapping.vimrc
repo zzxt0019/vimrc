@@ -11,14 +11,15 @@
     noremap H ^
     noremap L $
     
-    " 单个字符删除不进入缓存 "
+    " s和x删除不进入缓存 "
     noremap s "_s
+    noremap S "_S
     noremap x "_x
     noremap X "_X
     
     " Insert模式 jk 退出 "
     inoremap jk <esc>
-    
+
     " 清空搜索 "
     noremap <leader>/ <esc>:let @/ = ""<cr>
 

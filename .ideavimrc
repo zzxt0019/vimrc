@@ -27,6 +27,7 @@ nnoremap <leader><leader>ff <esc>:action FindInPath<cr>
 " ===== IdeaVim BUG ===== "
 " :s匹配后清除模式寄存器无效, 改为先用/搜索一次 "
 noremap <leader>/ /<cr>:let @/=""<cr>
+
 " highlightedyank_highlight_duration "
 " vim的类型是number ideavim的类型是string "
 let g:highlightedyank_highlight_duration = g:highlightedyank_highlight_duration.""
