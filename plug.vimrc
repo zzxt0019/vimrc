@@ -1,4 +1,8 @@
-call plug#begin('$VIM/vimfiles/plugged')
+let g:plugged=''
+if has("windows")
+    let g:plugged='$VIM/vimfiles/plugged'
+endif
+call plug#begin(g:plugged)
 Plug 'yianwillis/vimcdoc'               " 中文文档
 Plug 'morhetz/gruvbox'                  " 主题色
 Plug 'tpope/vim-surround'               " 括号 ys cs ds
