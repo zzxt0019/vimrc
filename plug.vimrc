@@ -1,7 +1,9 @@
-let g:plugged=''
 if has("windows")
     let g:plugged='$VIM/vimfiles/plugged'
+else
+    let g:plugged=''
 endif
+
 call plug#begin(g:plugged)
 Plug 'yianwillis/vimcdoc'               " 中文文档
 Plug 'morhetz/gruvbox'                  " 主题色
