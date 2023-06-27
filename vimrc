@@ -1,4 +1,4 @@
-if has("windows")
+if has("win64") || has("win32")
   source $VIM/plug.vimrc
   source $VIM/base.vimrc
   source $VIM/mapping.vimrc

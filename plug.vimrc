@@ -1,4 +1,4 @@
-if has("windows")
+if has("win64") || has("win32")
     let g:plugged='$VIM/vimfiles/plugged'
 else
     let g:plugged=''
