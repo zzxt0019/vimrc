@@ -44,7 +44,7 @@ set backspace=indent,eol,start
 set mouse+=a
 
 " 主题色
-colo gruvbox
+colo solarized
 set bg=dark
 
 " ===== Plug配置 ===== "
