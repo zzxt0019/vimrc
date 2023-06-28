@@ -4,6 +4,8 @@ else
     let g:plugged=''
 endif
 
+
+let g:plug_url_format='https://github.com/%s.git'
 call plug#begin(g:plugged)
 Plug 'yianwillis/vimcdoc'               " 中文文档
 Plug 'morhetz/gruvbox'                  " 主题色
