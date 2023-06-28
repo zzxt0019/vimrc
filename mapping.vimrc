@@ -74,12 +74,4 @@
     cnoremap <c-j> <down>
     cnoremap <c-k> <up>
     cnoremap <c-l> <right>
-    tnoremap <c-h> <left>
-    tnoremap <c-j> <down>
-    tnoremap <c-k> <up>
-    tnoremap <c-l> <right>
-    lnoremap <c-h> <left>
-    lnoremap <c-j> <down>
-    lnoremap <c-k> <up>
-    lnoremap <c-l> <right>
 " ---------- 选择模式 ---------- "
