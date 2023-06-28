@@ -53,7 +53,7 @@ let g:highlightedyank_highlight_duration = 2000
 " ===== Plug配置 ===== "
 
 " ====== GVIM设置 ====== "
-if has("gui")
+if has("gui") && (has("win64") || has("win32"))
   " 设置字体大小 "
   let dpi = str2nr(strpart(matchstr(substitute(
     \system('wmic desktopmonitor get PixelsPerXLogicalInch /value'),
