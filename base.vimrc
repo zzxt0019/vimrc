@@ -53,7 +53,7 @@ let g:highlightedyank_highlight_duration = 2000
 " ===== Plug配置 ===== "
 
 " ====== GVIM设置 ====== "
-if has("gui") && (has("win64") || has("win32"))
+if has("gui_running") && (has("win64") || has("win32"))
   " 设置字体大小 "
   let dpi = str2nr(strpart(matchstr(substitute(
     \system('wmic desktopmonitor get PixelsPerXLogicalInch /value'),
@@ -67,5 +67,5 @@ if has("gui") && (has("win64") || has("win32"))
   set lines=30 " 设置高度
   autocmd GuiEnter * set vb t_vb=
 endif
-" ====== Windows字体大小 ====== "
+" ====== GVIM设置 ====== "
 

@@ -21,13 +21,18 @@
     inoremap jk <esc>
 
     " 清空搜索 "
-    noremap <leader>/ <esc>:let @/ = ""<cr>
+    noremap <silent><leader>/ <esc>:let @/ = ""<cr>
 
     " /和?智能搜索 #和*精确搜索 "
     nnoremap / <esc>:set ignorecase smartcase<cr>/
     nnoremap ? <esc>:set ignorecase smartcase<cr>?
     nnoremap * <esc>:set noignorecase nosmartcase<cr>*
     nnoremap # <esc>:set noignorecase nosmartcase<cr>#
+
+    " 向前的motion 包含当前字符 "
+    onoremap b vb
+    onoremap F vF
+    onoremap T vT
 
 " ---------- 基础映射 ---------- "
 
@@ -74,4 +79,5 @@
     cnoremap <c-j> <down>
     cnoremap <c-k> <up>
     cnoremap <c-l> <right>
+
 " ---------- 选择模式 ---------- "
