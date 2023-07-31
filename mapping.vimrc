@@ -46,8 +46,10 @@
     
     " easymotion映射 "
     let g:EasyMotion_do_mapping = 0 " 禁用默认映射
-    map <leader>f <Plug>(easymotion-bd-f)
-    map <leader>t <Plug>(easymotion-bd-t)
+    noremap  <leader>f <Plug>(easymotion-bd-f)
+    noremap  <leader>t <Plug>(easymotion-bd-t)
+    onoremap <leader>f v<Plug>(easymotion-bd-f)
+    onoremap <leader>t v<Plug>(easymotion-bd-t)
 
 " ---------- 插件映射 ---------- "
 
