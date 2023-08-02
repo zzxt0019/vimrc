@@ -7,9 +7,10 @@
 
 " ========== 基础映射 ========== "
 
-    " HL映射行首行尾^$ "
+    " 不常用键映射 "
     noremap  H  ^
     noremap  L  $
+    noremap  M  %
     
     " s和x删除不进入缓存 "
     noremap  s  "_s
