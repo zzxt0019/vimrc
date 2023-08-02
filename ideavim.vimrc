@@ -49,17 +49,24 @@ set argtextobj
 # ===== Idea 模板 ===== "
 
 
-    let g:if = "koif (pa  ){jo}2k$F)h"
-    let g:ifnull = "koif (pa ==null ){jo}k0"
-    let g:ifnotnull = "koif (pa !=null ){jo}k0"
+    let g:If = "koif (pa  ){jo}2k$F)h"
+    let g:IfNull = "koif (pa ==null ){jo}k0"
+    let g:IfNotNull = "koif (pa !=null ){jo}k0"
+    let g:IfEquals = "koif (Objects.equals(pa, )){jo}2k$F)h"
+    let g:IfNotEquals = "koif (!Objects.equals(pa, )){jo}2k$F)h"
 
-    vnoremap <silent> <leader>if y<esc>:let<space>@-=g:if<cr>@-:let<space>@-=""<cr>i
-    nnoremap <silent> <leader>if yiw<esc>:let<space>@-=g:if<cr>@-:let<space>@-=""<cr>i
+    vnoremap <silent> <leader>iff y<esc>:let @-=g:If<cr>@-:let @-=""<cr>i
+    nnoremap <silent> <leader>iff yiw<esc>:let @-=g:If<cr>@-:let @-=""<cr>i
 
-    vnoremap <silent> <leader>inu y<esc>:let<space>@-=g:ifnull<cr>@-:let<space>@-=""<cr>
-    nnoremap <silent> <leader>inu yiw<esc>:let<space>@-=g:ifnull<cr>@-:let<space>@-=""<cr>
+    vnoremap <silent> <leader>ifnu y<esc>:let @-=g:IfNull<cr>@-:let @-=""<cr>
+    nnoremap <silent> <leader>ifnu yiw<esc>:let @-=g:IfNull<cr>@-:let @-=""<cr>
     
-    vnoremap <silent> <leader>inn y<esc>:let<space>@-=g:ifnotnull<cr>@-:let<space>@-=""<cr>
-    nnoremap <silent> <leader>inn yiw<esc>:let<space>@-=g:ifnotnull<cr>@-:let<space>@-=""<cr>
+    vnoremap <silent> <leader>ifnn y<esc>:let @-=g:IfNotNull<cr>@-:let @-=""<cr>
+    nnoremap <silent> <leader>ifnn yiw<esc>:let @-=g:IfNotNull<cr>@-:let @-=""<cr>
 
+    vnoremap <silent> <leader>ifeq y<esc>:let @-=g:IfEquals<cr>@-:let @-=""<cr>i
+    nnoremap <silent> <leader>ifeq yiw<esc>:let @-=g:IfEquals<cr>@-:let @-=""<cr>i
+
+    vnoremap <silent> <leader>ifne y<esc>:let @-=g:IfNotEquals<cr>@-:let @-=""<cr>i
+    nnoremap <silent> <leader>ifne yiw<esc>:let @-=g:IfNotEquals<cr>@-:let @-=""<cr>i
 " ===== Idea 模板 ===== "
