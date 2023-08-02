@@ -6,6 +6,7 @@ set multiple-cursors
 set exchange
 set highlightedyank
 set ReplaceWithRegister
+set argtextobj
 
 " ===== idea Action ===== "
 
@@ -45,9 +46,20 @@ set ReplaceWithRegister
 
 " ===== IdeaVim BUG ===== "
 
-" ===== Idea 模板 ===== "
+# ===== Idea 模板 ===== "
 
-    " 1. if!=null "
-    vnoremap <leader>ifnn y<esc>koif<space>(<esc>pa<space>!=<space>null){<esc>jo}<esc>
+
+    let g:if = "koif (pa  ){jo}2k$F)h"
+    let g:ifnull = "koif (pa ==null ){jo}k0"
+    let g:ifnotnull = "koif (pa !=null ){jo}k0"
+
+    vnoremap <silent> <leader>if y<esc>:let<space>@-=g:if<cr>@-:let<space>@-=""<cr>i
+    nnoremap <silent> <leader>if yiw<esc>:let<space>@-=g:if<cr>@-:let<space>@-=""<cr>i
+
+    vnoremap <silent> <leader>inu y<esc>:let<space>@-=g:ifnull<cr>@-:let<space>@-=""<cr>
+    nnoremap <silent> <leader>inu yiw<esc>:let<space>@-=g:ifnull<cr>@-:let<space>@-=""<cr>
     
+    vnoremap <silent> <leader>inn y<esc>:let<space>@-=g:ifnotnull<cr>@-:let<space>@-=""<cr>
+    nnoremap <silent> <leader>inn yiw<esc>:let<space>@-=g:ifnotnull<cr>@-:let<space>@-=""<cr>
+
 " ===== Idea 模板 ===== "

@@ -16,4 +16,5 @@ Plug 'tpope/vim-commentary'             " 代码注释 gc
 Plug 'tommcdo/vim-exchange'             " 交换文本 cx
 Plug 'machakann/vim-highlightedyank'    " 复制高亮
 Plug 'vim-scripts/ReplaceWithRegister'  " 替换 gr
+Plug 'vim-scripts/argtextobj.vim'       " 方法参数 [d/c][i/a]a
 call plug#end()
