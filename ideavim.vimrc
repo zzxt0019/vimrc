@@ -28,7 +28,7 @@ set argtextobj
     " 1. 清除寄存器 "
     " (vimrc配置为 `noremap <leader>/ :let @/=""`) "
     " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次 "
-    noremap <leader>/ /<cr>:let @/=""<cr>
+    noremap <leader>/ /<cr>``:let @/=""<cr>
 
     " 2. hightlightedyank插件 "
     " highlightedyank_highlight_duration参数的类型与vim不同, 需转换类型 "
@@ -46,14 +46,14 @@ set argtextobj
 
 " ===== IdeaVim BUG ===== "
 
-# ===== Idea 模板 ===== "
+" ===== Idea 模板 ===== "
 
 
-    let g:If = "koif (pa  ){jo}2k$F)h"
-    let g:IfNull = "koif (pa ==null ){jo}k0"
-    let g:IfNotNull = "koif (pa !=null ){jo}k0"
-    let g:IfEquals = "koif (Objects.equals(pa, )){jo}2k$F)h"
-    let g:IfNotEquals = "koif (!Objects.equals(pa, )){jo}2k$F)h"
+    let g:If = "koif (pa  ) {jo}2k$F)h"
+    let g:IfNull = "koif (pa == null ) {jo}k^"
+    let g:IfNotNull = "koif (pa != null ) {jo}k^"
+    let g:IfEquals = "koif (Objects.equals(pa, )) {jo}2k$F)h"
+    let g:IfNotEquals = "koif (!Objects.equals(pa, )) {jo}2k$F)h"
 
     vnoremap <silent> <leader>iff y<esc>:let @-=g:If<cr>@-:let @-=""<cr>i
     nnoremap <silent> <leader>iff yiw<esc>:let @-=g:If<cr>@-:let @-=""<cr>i
