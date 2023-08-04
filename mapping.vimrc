@@ -83,4 +83,8 @@
     cnoremap  <c-k>  <up>
     cnoremap  <c-l>  <right>
 
+    " 插入模式跨词移动 "
+    inoremap  <c-s-h>  <c-o>b
+    inoremap  <c-s-l>  <c-o>w
+
 " ---------- 选择模式 ---------- "
