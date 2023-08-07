@@ -22,13 +22,7 @@
     inoremap  jk  <esc>
 
     " 清空搜索 "
-    noremap  <silent><leader>/  <esc>:let @/ = ""<cr>
-
-    " /和?智能搜索 #和*精确搜索 "
-    nnoremap  /  <esc>:set ignorecase smartcase<cr>/
-    nnoremap  ?  <esc>:set ignorecase smartcase<cr>?
-    nnoremap  *  <esc>:set noignorecase nosmartcase<cr>*
-    nnoremap  #  <esc>:set noignorecase nosmartcase<cr>#
+    noremap  <silent>  <leader>/  <esc>:let @/ = ""<cr>
 
     " 向前的motion 包含当前字符 "
     onoremap  b  vb
@@ -40,10 +34,10 @@
 " ========== 插件映射 ========== "
 
     " NERDTree映射 "
-    noremap <leader>nn <esc>:NERDTree<cr>
-    noremap <leader>nf <esc>:NERDTreeFind<cr>
-    noremap <leader>nt <esc>:NERDTreeToggle<cr>
-    noremap <leader>nm <esc>:NERDTreeMirror<cr>
+    noremap <silent>  <leader>nn <esc>:NERDTree<cr>
+    noremap <silent>  <leader>nf <esc>:NERDTreeFind<cr>
+    noremap <silent>  <leader>nt <esc>:NERDTreeToggle<cr>
+    noremap <silent>  <leader>nm <esc>:NERDTreeMirror<cr>
     
     " easymotion映射 "
     let g:EasyMotion_do_mapping = 0 " 禁用默认映射

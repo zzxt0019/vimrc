@@ -49,9 +49,9 @@ set argtextobj
 " ===== Idea 模板 ===== "
 
 
-    let g:If = "koif (pa  ) {jo}2k$F)h"
-    let g:IfNull = "koif (pa == null ) {jo}k^"
-    let g:IfNotNull = "koif (pa != null ) {jo}k^"
+    let g:If = "koif (pa ) {jo}2k$F)"
+    let g:IfNull = "koif (pa == null) {jo}k^"
+    let g:IfNotNull = "koif (pa != null) {jo}k^"
     let g:IfEquals = "koif (Objects.equals(pa, )) {jo}2k$F)h"
     let g:IfNotEquals = "koif (!Objects.equals(pa, )) {jo}2k$F)h"
 
