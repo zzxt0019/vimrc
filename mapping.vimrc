@@ -8,9 +8,9 @@
 " ========== 基础映射 ========== "
 
     " 不常用键映射 "
-    noremap  H  ^
-    noremap  L  $
-    noremap  M  %
+    map  H  ^
+    map  L  $
+    map  M  %
     
     " s和x删除不进入缓存 "
     noremap  s  "_s
@@ -25,6 +25,8 @@
     noremap  <silent>  <leader>/  <esc>:let @/ = ""<cr>
 
     " 向前的motion 包含当前字符 "
+    onoremap  0  v0
+    onoremap  ^  v^
     onoremap  b  vb
     onoremap  F  vF
     onoremap  T  vT
@@ -34,10 +36,10 @@
 " ========== 插件映射 ========== "
 
     " NERDTree映射 "
-    noremap <silent>  <leader>nn <esc>:NERDTree<cr>
-    noremap <silent>  <leader>nf <esc>:NERDTreeFind<cr>
-    noremap <silent>  <leader>nt <esc>:NERDTreeToggle<cr>
-    noremap <silent>  <leader>nm <esc>:NERDTreeMirror<cr>
+    noremap  <leader>nn <esc>:NERDTree<cr>
+    noremap  <leader>nf <esc>:NERDTreeFind<cr>
+    noremap  <leader>nt <esc>:NERDTreeToggle<cr>
+    noremap  <leader>nm <esc>:NERDTreeMirror<cr>
     
     " easymotion映射 "
     let g:EasyMotion_do_mapping = 0 " 禁用默认映射

@@ -11,15 +11,16 @@ set argtextobj
 " ===== idea Action ===== "
 
     " 重命名 "
-    nnoremap <leader><leader>re <esc>:action RenameElement<cr>
+    noremap <leader><leader>re <esc>:action RenameElement<cr>
     " 引入变量 "
     nnoremap <leader><leader>va <esc>:action IntroduceVariable<cr>
+    vnoremap <leader><leader>va :'<,'>action IntroduceVariable<cr>
     " 新建 "
-    nnoremap <leader><leader>ne <esc>:action NewElement<cr>
-    nnoremap <leader><leader>nc <esc>:action NewClass<cr>
-    nnoremap <leader><leader>nd <esc>:action NewDir<cr>
+    noremap <leader><leader>ne <esc>:action NewElement<cr>
+    noremap <leader><leader>nc <esc>:action NewClass<cr>
+    noremap <leader><leader>nd <esc>:action NewDir<cr>
     " 全局查找 "
-    nnoremap <leader><leader>ff <esc>:action FindInPath<cr>
+    noremap <leader><leader>ff <esc>:action FindInPath<cr>
     
 " ===== idea Action ===== "
 
@@ -38,6 +39,8 @@ set argtextobj
     " 3. 向左motion不包含当前字符 "
     " (vim: 映射 b->vb F->vF T->vT) "
     " ideavim没有实现 dv yv cv 功能, 因此 清除vim的映射 "
+    ounmap 0
+    ounmap ^
     ounmap b
     ounmap F
     ounmap T
@@ -46,7 +49,7 @@ set argtextobj
 
 " ===== IdeaVim BUG ===== "
 
-" ===== Idea 模板 ===== "
+" ===== 自定义 ===== "
 
 
     let g:If = "koif (pa ) {jo}2k$F)"
@@ -69,4 +72,12 @@ set argtextobj
 
     vnoremap <silent> <leader>ifne y<esc>:let @-=g:IfNotEquals<cr>@-:let @-=""<cr>i
     nnoremap <silent> <leader>ifne yiw<esc>:let @-=g:IfNotEquals<cr>@-:let @-=""<cr>i
-" ===== Idea 模板 ===== "
+
+    " goto class head "
+    nnoremap <silent> <leader>hc gg/public class<cr>:let @/=""<cr>zz
+    nnoremap <silent> <leader>hh gg/public class<cr>:let @/=""<cr>zz
+    " goto method head "
+    nnoremap <silent> <leader>hf [m
+    nnoremap <silent> <leader>hm [m
+
+" ===== 自定义 ===== "
