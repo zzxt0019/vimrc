@@ -28,6 +28,10 @@ set mouse+=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 光标上下两侧最少保留的屏幕行数
 set scrolloff=7
+" 光标左右两侧最少保留的屏幕列数
+set sidescrolloff=20
+set sidescroll=1
+
 
 " 命令行补全以增强模式运行
 set wildmenu
@@ -51,7 +55,7 @@ set ignorecase smartcase hlsearch incsearch
 set lazyredraw
 
 " 取消提示音
-set noerrorbells novisualbell t_vb=
+set noerrorbells visualbell t_vb=
 if has("gui_running")
     autocmd GUIEnter * set vb t_vb=
 endif
@@ -112,7 +116,7 @@ set tw=500
 
 set autoindent smartindent
 " 显示时自动换行
-set wrap 
+" set wrap 
 
 """"""""""""""""""""""""""""""
 " => Status line
