@@ -1,58 +1,137 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 通用
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 取消兼容模式
-set nocompatible 
+set nocompatible
 
-" 语法高亮
-syntax on
+" Sets how many lines of history VIM has to remember
+set history=500
 
-" 显示行号 相对行号
-set number relativenumber
+" Enable filetype plugins
+filetype plugin on
+filetype indent on
 
-" 右下角显示光标位置 显示当前命令
-set ruler showcmd
-
-" 显示自动换行
-set wrap
-
-" 将tab替换为空格
-set expandtab
-
-" 缩进类型
-set autoindent smartindent
-
-" 设置取消备份 禁止临时文件生成
-set nobackup noswapfile writebackup noundofile 
-
-" 自动读取来自外部的修改
+" Set to auto read when a file is changed from the outside
 set autoread
-
-" 系统剪切板
-set clipboard^=unnamed,unnamedplus
-
-" 搜索智能大小写 高亮 动态显示
-set ignorecase smartcase hlsearch incsearch
-
-" 取消提示音
-set noeb vb t_vb=
+au FocusGained,BufEnter * checktime
 
 " 不显示默认启动信息
 set shortmess+=I
 
-" 退格键
-set backspace=indent,eol,start
+" 系统剪切板
+set clipboard^=unnamed,unnamedplus
 
 " 启用鼠标
 set mouse+=a
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 用户界面
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 光标上下两侧最少保留的屏幕行数
+set scrolloff=7
 
-" 主题色
-colo solarized
-set bg=dark
+" 命令行补全以增强模式运行
+set wildmenu
 
-" ===== Plug配置 ===== "
+" 显示光标位置的行号和列号
+set ruler
+
+" 显示当前命令
+set showcmd
+
+" 显示行号 相对行号
+set number relativenumber
+
+" 退格键设置
+set backspace=eol,start,indent
+
+" 搜索智能大小写 高亮 动态显示
+set ignorecase smartcase hlsearch incsearch
+
+" Don't redraw while executing macros (good performance config)
+set lazyredraw
+
+" 取消提示音
+set noerrorbells novisualbell t_vb=
+if has("gui_running")
+    autocmd GUIEnter * set vb t_vb=
+endif
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 颜色字体
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 语法高亮
+syntax enable
+
+" 正则表达式引擎
+set regexpengine=0
+
+" Enable 256 colors palette in Gnome Terminal
+if $COLORTERM == 'gnome-terminal'
+    set t_Co=256
+endif
+
+try
+    colorscheme solarized
+catch
+endtry
+set background=dark
+
+" Set extra options when running in GUI mode
+if has("gui_running")
+    set guioptions-=T
+    set guioptions-=e
+    set t_Co=256
+    set guitablabel=%M\ %t
+endif
+
+" Set utf8 as standard encoding and en_US as the standard language
+set encoding=utf8
+
+" Use Unix as the standard file type
+set ffs=unix,dos,mac
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 备份文件
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nobackup nowritebackup noswapfile
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => 文本
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 将tab替换为空格
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set autoindent smartindent
+" 显示时自动换行
+set wrap 
+
+""""""""""""""""""""""""""""""
+" => Status line
+""""""""""""""""""""""""""""""
+" Always show the status line
+set laststatus=2
+
+
+""""""""""""""""""""""""""""""
+" => Plugin
+""""""""""""""""""""""""""""""
+" easymotion智能大小写
 let g:EasyMotion_smartcase = 1
+" highlightedyank显示时间
 let g:highlightedyank_highlight_duration = 2000
-" ===== Plug配置 ===== "
 
-" ====== GVIM设置 ====== "
+""""""""""""""""""""""""""""""
+" => GVim
+""""""""""""""""""""""""""""""
 if has("gui_running") && (has("win64") || has("win32"))
   " 设置字体大小 "
   let dpi = str2nr(strpart(matchstr(substitute(
@@ -65,7 +144,5 @@ if has("gui_running") && (has("win64") || has("win32"))
 
   set columns=120 " 设置宽度
   set lines=30 " 设置高度
-  autocmd GuiEnter * set vb t_vb=
 endif
-" ====== GVIM设置 ====== "
 
