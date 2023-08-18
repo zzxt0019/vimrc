@@ -29,6 +29,7 @@ set mouse+=a
 " 光标上下两侧最少保留的屏幕行数
 set scrolloff=7
 " 光标左右两侧最少保留的屏幕列数
+set nowrap
 set sidescrolloff=20
 set sidescroll=1
 
@@ -115,8 +116,6 @@ set lbr
 set tw=500
 
 set autoindent smartindent
-" 显示时自动换行
-" set wrap 
 
 """"""""""""""""""""""""""""""
 " => Status line
