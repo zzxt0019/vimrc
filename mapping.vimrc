@@ -17,12 +17,6 @@
     noremap  S  "_S
     noremap  x  "_x
     noremap  X  "_X
-    
-    " Insert模式 jk 退出 "
-    inoremap  jk  <esc>
-
-    " 清空搜索 "
-    noremap  <silent>  <leader>/  <esc>:let @/ = ""<cr>
 
     " 向前的motion 包含当前字符 "
     onoremap  0  v0
@@ -33,13 +27,23 @@
 
 " ---------- 基础映射 ---------- "
 
+" ========== 快捷操作 ========== "
+
+    " Insert模式 jk 退出 "
+    inoremap  jk  <esc>
+
+    " 清空搜索 "
+    nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
+
+" ---------- 快捷操作 ---------- "
+
 " ========== 插件映射 ========== "
 
     " NERDTree映射 "
-    noremap  <leader>nn <esc>:NERDTree<cr>
-    noremap  <leader>nf <esc>:NERDTreeFind<cr>
-    noremap  <leader>nt <esc>:NERDTreeToggle<cr>
-    noremap  <leader>nm <esc>:NERDTreeMirror<cr>
+    noremap  <leader>nn  <esc>:NERDTree<cr>
+    noremap  <leader>nf  <esc>:NERDTreeFind<cr>
+    noremap  <leader>nt  <esc>:NERDTreeToggle<cr>
+    noremap  <leader>nm  <esc>:NERDTreeMirror<cr>
     
     " easymotion映射 "
     let g:EasyMotion_do_mapping = 0 " 禁用默认映射
@@ -80,7 +84,11 @@
     cnoremap  <c-l>  <right>
 
     " 插入模式跨词移动 "
-    inoremap  <c-s-h>  <c-o>b
-    inoremap  <c-s-l>  <c-o>w
+    noremap   <c-s-h>  <c-left>
+    noremap   <c-s-l>  <c-right>
+    inoremap  <c-s-h>  <c-left>
+    inoremap  <c-s-l>  <c-right>
+    cnoremap  <c-s-h>  <c-left>
+    cnoremap  <c-s-l>  <c-right>
 
 " ---------- 选择模式 ---------- "
