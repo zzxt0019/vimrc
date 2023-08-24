@@ -87,11 +87,11 @@
     cnoremap  <c-l>  <right>
 
     " 插入模式跨词移动 "
-    noremap   <c-s-h>  <c-left>
-    noremap   <c-s-l>  <c-right>
-    inoremap  <c-s-h>  <c-left>
-    inoremap  <c-s-l>  <c-right>
-    cnoremap  <c-s-h>  <c-left>
-    cnoremap  <c-s-l>  <c-right>
+    noremap   <c-s-h>  <s-left>
+    noremap   <c-s-l>  <s-right>
+    inoremap  <c-s-h>  <s-left>
+    inoremap  <c-s-l>  <s-right>
+    cnoremap  <c-s-h>  <s-left>
+    cnoremap  <c-s-l>  <s-right>
 
 " ---------- 选择模式 ---------- "
