@@ -27,7 +27,7 @@ set mouse+=a
 " => 用户界面
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 光标上下两侧最少保留的屏幕行数
-set scrolloff=7
+set scrolloff=5
 " 光标左右两侧最少保留的屏幕列数
 set nowrap
 set sidescrolloff=20
