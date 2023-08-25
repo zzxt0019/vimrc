@@ -28,6 +28,7 @@ set mouse+=a
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 光标上下两侧最少保留的屏幕行数
 set scrolloff=5
+
 " 光标左右两侧最少保留的屏幕列数
 set nowrap
 set sidescrolloff=20
@@ -45,6 +46,9 @@ set showcmd
 
 " 显示行号 相对行号
 set number relativenumber
+
+" 高亮显示当前行 "
+set cursorline
 
 " 退格键设置
 set backspace=eol,start,indent

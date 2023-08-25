@@ -15,6 +15,7 @@ Plug 'yianwillis/vimcdoc'
 Plug 'altercation/vim-colors-solarized'
 Plug 'joshdick/onedark.vim'
 Plug 'flazz/vim-colorschemes'
+Plug 'chiendo97/intellij.vim'
 
 " IdeaVim支持插件
 Plug 'tpope/vim-surround'               " 括号 [command] (y/c/d)s
