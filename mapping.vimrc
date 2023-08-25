@@ -2,8 +2,13 @@
 
     let g:mapleader="'"
     " 取消当前leader键的原始功能 "
-    noremap  '   <nop>
-    noremap  ''  <nop>
+    nnoremap  '   <nop>
+    nnoremap  ''  <nop>
+    xnoremap  '   <nop>
+    xnoremap  '   <nop>
+    onoremap  ''  <nop>
+    onoremap  ''  <nop>
+    
 
 " ---------- leader映射 ----------- "
 
@@ -45,9 +50,9 @@
     nmap  H  ^
     nmap  L  $
     nmap  M  %
-    vmap  H  ^
-    vmap  L  $
-    vmap  M  %
+    xmap  H  ^
+    xmap  L  $
+    xmap  M  %
     omap  H  ^
     omap  L  $
     omap  M  %
@@ -57,10 +62,10 @@
     nnoremap  S  "_S
     nnoremap  x  "_x
     nnoremap  X  "_X
-    vnoremap  s  "_s
-    vnoremap  S  "_S
-    vnoremap  x  "_x
-    vnoremap  X  "_X
+    xnoremap  s  "_s
+    xnoremap  S  "_S
+    xnoremap  x  "_x
+    xnoremap  X  "_X
     onoremap  s  "_s
     onoremap  S  "_S
     onoremap  x  "_x
@@ -74,7 +79,7 @@
     onoremap  T  vT
 
     " 可视模式直接搜索当前选择内容 "
-    vnoremap / "-y:let @/=@-<cr>/<cr>N
+    xnoremap <silent> / "-y:let @/=@-<cr>/<cr>N
 
 " ---------- 基础映射 ---------- "
 
@@ -95,10 +100,10 @@
     nnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     nnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
     nnoremap  <leader>nm  <esc>:NERDTreeMirror<cr>
-    vnoremap  <leader>nn  <esc>:NERDTree<cr>
-    vnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
-    vnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
-    vnoremap  <leader>nm  <esc>:NERDTreeMirror<cr>
+    xnoremap  <leader>nn  <esc>:NERDTree<cr>
+    xnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
+    xnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
+    xnoremap  <leader>nm  <esc>:NERDTreeMirror<cr>
     onoremap  <leader>nn  <esc>:NERDTree<cr>
     onoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     onoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
@@ -108,8 +113,8 @@
     let g:EasyMotion_do_mapping = 0 " 禁用默认映射
     nnoremap  <leader>f  <Plug>(easymotion-bd-f)
     nnoremap  <leader>t  <Plug>(easymotion-bd-t)
-    vnoremap  <leader>f  <Plug>(easymotion-bd-f)
-    vnoremap  <leader>t  <Plug>(easymotion-bd-t)
+    xnoremap  <leader>f  <Plug>(easymotion-bd-f)
+    xnoremap  <leader>t  <Plug>(easymotion-bd-t)
     onoremap  <leader>f  v<Plug>(easymotion-bd-f)
     onoremap  <leader>t  v<Plug>(easymotion-bd-t)
 
