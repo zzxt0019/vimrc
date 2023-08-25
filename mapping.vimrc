@@ -80,6 +80,7 @@
 
     " 可视模式直接搜索当前选择内容 "
     xnoremap <silent> / "-y:let @/=@-<cr>/<cr>N
+    xnoremap <silent> ? "-y:let @/=@-<cr>?<cr>N
 
 " ---------- 基础映射 ---------- "
 
