@@ -3,11 +3,8 @@
     let g:mapleader="'"
     " 取消当前leader键的原始功能 "
     nnoremap  '   <nop>
-    nnoremap  ''  <nop>
     xnoremap  '   <nop>
-    xnoremap  '   <nop>
-    onoremap  ''  <nop>
-    onoremap  ''  <nop>
+    onoremap  '   <nop>
     
 
 " ---------- leader映射 ----------- "
