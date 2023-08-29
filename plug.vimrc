@@ -30,4 +30,5 @@ Plug 'vim-scripts/argtextobj.vim'       " 方法参数 [motion] (i/a)a
 " 其他插件
 Plug 'ZSaberLv0/vim-easymotion-chs'     " easymotion中文扩展
 Plug 'terryma/vim-multiple-cursors'
+Plug 'tpope/vim-repeat'
 call plug#end()

@@ -8,19 +8,19 @@ set highlightedyank
 set ReplaceWithRegister
 set argtextobj
 
-" ===== idea Action ===== "
+" =====LHr#cLHr#on ===== "
 
     " 重命名 "
-    noremap <leader><leader>re <esc>:action RenameElement<cr>
+    map <leader><leader>re <Action>(RenameElement)
     " 引入变量 "
-    nnoremap <leader><leader>va <esc>:action IntroduceVariable<cr>
-    vnoremap <leader><leader>va :'<,'>action IntroduceVariable<cr>
+    map <leader><leader>va <Action>(IntroduceVariable)
     " 新建 "
-    noremap <leader><leader>ne <esc>:action NewElement<cr>
-    noremap <leader><leader>nc <esc>:action NewClass<cr>
-    noremap <leader><leader>nd <esc>:action NewDir<cr>
+    map <leader><leader>ne <Action>(NewElement)
     " 全局查找 "
-    noremap <leader><leader>ff <esc>:action FindInPath<cr>
+    map <leader><leader>ff <Action>(FindInPath)
+    " 更好的<c-o><c-i>? "
+    nmap <c-o> <Action>(Back)
+    nmap <c-i> <Action>(Forward)
     
 " ===== idea Action ===== "
 
