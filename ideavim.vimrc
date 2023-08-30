@@ -8,39 +8,39 @@ set highlightedyank
 set ReplaceWithRegister
 set argtextobj
 
-" ===== idea Action ===== "
+# ===== idea Action ===== 
 
-    " 重命名 "
+    # 重命名 
     map <leader><leader>re <Action>(RenameElement)
-    " 引入变量 "
+    # 引入变量 
     map <leader><leader>va <Action>(IntroduceVariable)
-    " 新建 "
+    # 新建 
     map <leader><leader>ne <Action>(NewElement)
-    " 全局查找 "
+    # 全局查找 
     map <leader><leader>ff <Action>(FindInPath)
 
-    " idea更好的实现 "
+    # idea更好的实现 
     nmap <c-o> <Action>(Back)
     nmap <c-i> <Action>(Forward)
     nmap J     <Action>(EditorJoinLines)
     
-" ===== idea Action ===== "
+# ===== idea Action ===== 
 
-" ===== IdeaVim BUG ===== "
+# ===== IdeaVim BUG ===== 
 
-    " 1. 清除寄存器 "
-    " (vimrc配置为 `noremap <leader>/ :let @/=""`) "
-    " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次 "
+    # 1. 清除寄存器 
+    # (vimrc配置为 `noremap <leader>/ :let @/=""`) 
+    # :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次 
     noremap <leader>/ /<cr>``:let @/=""<cr>
 
-    " 2. hightlightedyank插件 "
-    " highlightedyank_highlight_duration参数的类型与vim不同, 需转换类型 "
-    " vim的类型是number ideavim的类型是string "
+    # 2. hightlightedyank插件 
+    # highlightedyank_highlight_duration参数的类型与vim不同, 需转换类型 
+    # vim的类型是number ideavim的类型是string 
     let g:highlightedyank_highlight_duration = g:highlightedyank_highlight_duration.""
 
-    " 3. 向左motion不包含当前字符 "
-    " (vim: 映射 b->vb F->vF T->vT) "
-    " ideavim没有实现 dv yv cv 功能, 因此 清除vim的映射 "
+    # 3. 向左motion不包含当前字符 
+    # (vim: 映射 b->vb F->vF T->vT) 
+    # ideavim没有实现 dv yv cv 功能, 因此 清除vim的映射 
     ounmap 0
     ounmap ^
     ounmap b
@@ -49,9 +49,9 @@ set argtextobj
     map <leader>f <Plug>(easymotion-bd-f)
     map <leader>t <Plug>(easymotion-bd-t)
 
-" ===== IdeaVim BUG ===== "
+# ===== IdeaVim BUG ===== 
 
-" ===== 自定义 ===== "
+# ===== 自定义 ===== 
 
 
     let g:If = "koif (pa ) {jo}2k$F)"
@@ -75,10 +75,10 @@ set argtextobj
     vnoremap <silent> <leader>ifne y<esc>:let @-=g:IfNotEquals<cr>@-:let @-=""<cr>i
     nnoremap <silent> <leader>ifne yiw<esc>:let @-=g:IfNotEquals<cr>@-:let @-=""<cr>i
 
-    " goto class head "
+    # goto class head 
     nnoremap <silent> <leader>hc gg/public class<cr>:let @/=""<cr>zz
     nnoremap <silent> <leader>hh gg/public class<cr>:let @/=""<cr>zz
-    " goto method head "
+    # goto method head 
     nnoremap <silent> <leader>hf [m
     nnoremap <silent> <leader>hm [m
 
