@@ -8,7 +8,7 @@ set highlightedyank
 set ReplaceWithRegister
 set argtextobj
 
-" =====LHr#cLHr#on ===== "
+" ===== idea Action ===== "
 
     " 重命名 "
     map <leader><leader>re <Action>(RenameElement)
@@ -18,9 +18,11 @@ set argtextobj
     map <leader><leader>ne <Action>(NewElement)
     " 全局查找 "
     map <leader><leader>ff <Action>(FindInPath)
-    " 更好的<c-o><c-i>? "
+
+    " idea更好的实现 "
     nmap <c-o> <Action>(Back)
     nmap <c-i> <Action>(Forward)
+    nmap J     <Action>(EditorJoinLines)
     
 " ===== idea Action ===== "
 
