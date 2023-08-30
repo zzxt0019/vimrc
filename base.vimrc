@@ -79,7 +79,12 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
+    " onedark "
+    colorscheme onedark
+
+    " solarized "
     colorscheme solarized
+    let g:solarized_contrast = "high"
 catch
 endtry
 set background=dark
