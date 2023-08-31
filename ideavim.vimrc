@@ -9,6 +9,7 @@ set ReplaceWithRegister
 set argtextobj
 
 # ===== idea Action ===== 
+    " set trackactionids
 
     # 重命名 
     map <leader><leader>re <Action>(RenameElement)
@@ -20,9 +21,11 @@ set argtextobj
     map <leader><leader>ff <Action>(FindInPath)
 
     # idea更好的实现 
-    nmap <c-o> <Action>(Back)
-    nmap <c-i> <Action>(Forward)
-    nmap J     <Action>(EditorJoinLines)
+    nmap <c-o>  <Action>(Back)
+    nmap <c-i>  <Action>(Forward)
+    nmap J      <Action>(EditorJoinLines)
+    map <c-s-j> <Action>(MoveStatementDown)
+    map <c-s-k> <Action>(MoveStatementUp)
     
 # ===== idea Action ===== 
 
