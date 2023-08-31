@@ -1,13 +1,7 @@
-if has("win64") || has("win32")
-    let g:plugged='$VIM/vimfiles/plugged'
-else
-    let g:plugged='$HOME/.vim/plugged'
-endif
-
 " Download plug.vim Into autoload directory
 " https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 let g:plug_url_format='https://github.com/%s.git'
-call plug#begin(g:plugged)
+call plug#begin(g:Vimrc.'plugged')
 " 中文文档
 Plug 'yianwillis/vimcdoc'
 
