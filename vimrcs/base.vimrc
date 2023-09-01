@@ -82,9 +82,11 @@ try
     " onedark "
     colorscheme onedark
 
-    " solarized "
-    colorscheme solarized
-    let g:solarized_contrast = "high"
+    if has("gui_running")
+        " solarized "
+        colorscheme solarized
+        let g:solarized_contrast = "high"
+    endif
 catch
 endtry
 set background=dark
