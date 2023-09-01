@@ -1,12 +1,19 @@
-set surround
-set NERDTree
 set easymotion
-set commentary
+" set sneak
+set NERDTree
+set surround
 set multiple-cursors
-set exchange
-set highlightedyank
+set commentary
 set ReplaceWithRegister
 set argtextobj
+set exchange
+" set textobj-entire
+set highlightedyank
+" set vim-paragraph-motion
+" set vim-indent-object
+" set matchit
+set quickscope
+
 
 # ===== idea Action ===== 
     " set trackactionids

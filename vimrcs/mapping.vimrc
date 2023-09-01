@@ -94,15 +94,15 @@
 " ========== 插件映射 ========== "
 
     " NERDTree映射 "
-    nnoremap  <leader>n   <esc>:NERDTree 
+    nnoremap  <leader>nn  <esc>:NERDTree 
     nnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     nnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
     nnoremap  <leader>nm  <esc>:NERDTreeMirror<cr>
-    xnoremap  <leader>n   <esc>:NERDTree 
+    xnoremap  <leader>nn  <esc>:NERDTree 
     xnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     xnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
     xnoremap  <leader>nm  <esc>:NERDTreeMirror<cr>
-    onoremap  <leader>n   <esc>:NERDTree 
+    onoremap  <leader>nn  <esc>:NERDTree 
     onoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     onoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
     onoremap  <leader>nm  <esc>:NERDTreeMirror<cr>
