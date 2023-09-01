@@ -41,7 +41,7 @@ set quickscope
     # 1. 清除寄存器 
     # (vimrc配置为 `noremap <leader>/ :let @/=""`) 
     # :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次 
-    noremap <leader>/ /<cr>``:let @/=""<cr>
+    nnoremap <leader>/ /<cr>``:let @/=""<cr>
 
     # 2. hightlightedyank插件 
     # highlightedyank_highlight_duration参数的类型与vim不同, 需转换类型 
