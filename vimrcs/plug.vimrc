@@ -29,6 +29,7 @@ Plug 'unblevable/quick-scope'           " 高亮每个单词中唯一的字符
 Plug 'ZSaberLv0/vim-easymotion-chs'     " easymotion中文扩展
 Plug 'tpope/vim-repeat'                 " tpope command repeat
 Plug 'vim-airline/vim-airline'          " 状态栏
+Plug 'vim-airline/vim-airline-themes'   " 状态栏
 Plug 'junegunn/fzf',                    " fzf
             \ { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                 " fzf
