@@ -1,7 +1,5 @@
-" Download plug.vim Into autoload directory
-" https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 let g:plug_url_format='https://github.com/%s.git'
-call plug#begin(g:VimrcPath.'plugged')
+call plug#begin(g:VimrcPath.'/plugged')
 " 中文文档
 Plug 'yianwillis/vimcdoc'
 
