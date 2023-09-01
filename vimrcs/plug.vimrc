@@ -31,7 +31,7 @@ Plug 'tpope/vim-repeat'                 " tpope command repeat
 Plug 'vim-airline/vim-airline'          " 状态栏
 Plug 'vim-airline/vim-airline-themes'   " 状态栏
 Plug 'junegunn/fzf',                    " fzf
-            \ { 'do': { -> fzf#install() } }
+     \ { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                 " fzf
 Plug 'mhinz/vim-startify'               " 开启时打开最近文件
 call plug#end()
