@@ -136,8 +136,12 @@ set laststatus=2
 """"""""""""""""""""""""""""""
 " => Plugin
 """"""""""""""""""""""""""""""
+" NERDTree切换目录时自动切换vim根目录
+let NERDTreeChDirMode = 2
+
 " easymotion智能大小写
 let g:EasyMotion_smartcase = 1
+
 " highlightedyank显示时间
 let g:highlightedyank_highlight_duration = 2000
 
