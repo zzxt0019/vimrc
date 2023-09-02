@@ -68,29 +68,34 @@
     onoremap  x  "_x
     onoremap  X  "_X
 
-    " 向前的motion 包含当前字符 "
-    onoremap  0  v0
-    onoremap  ^  v^
-    onoremap  b  vb
-    onoremap  F  vF
-    onoremap  T  vT
+    if !has("ide")  " ideavim不支持v-motion操作
+        " 向前的motion 包含当前字符 "
+        onoremap  0  v0
+        onoremap  ^  v^
+        onoremap  b  vb
+        onoremap  F  vF
+        onoremap  T  vT
+    endif
 
     " 可视模式直接搜索当前选择内容 "
     xnoremap <silent> / "-y:let @/=@-<cr>/<cr>N
     xnoremap <silent> ? "-y:let @/=@-<cr>?<cr>N
 
-    nnoremap <silent> n :call CommandN('n')<cr>
-    xnoremap <silent> n :call CommandN('n')<cr>
-    onoremap <silent> n :call CommandN('n')<cr>
-    nnoremap <silent> N :call CommandN('N')<cr>
-    xnoremap <silent> N :call CommandN('N')<cr>
-    onoremap <silent> N :call CommandN('N')<cr>
+    if !has("ide")  " vim bug: @/为空时n/N搜索空格
+        nnoremap <silent> n :call CommandN('n')<cr>
+        xnoremap <silent> n :call CommandN('n')<cr>
+        onoremap <silent> n :call CommandN('n')<cr>
+        nnoremap <silent> N :call CommandN('N')<cr>
+        xnoremap <silent> N :call CommandN('N')<cr>
+        onoremap <silent> N :call CommandN('N')<cr>
+    endif
 
     function! CommandN(n)
         if @/ != "" && ( a:n == 'n' || a:n == 'N' )
             execute 'norm! '.a:n
         endif
     endfunction
+    
 
 " ---------- 基础映射 ---------- "
 
@@ -99,8 +104,13 @@
     " Insert模式 jk 退出 "
     inoremap  jk  <esc>
 
-    " 清空搜索 "
-    nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
+    if !has("ide")
+        " 清空搜索 "
+        nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
+    elseif  " ideavim bug
+        " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次 "
+        nnoremap <leader>/ /<cr>``:let @/=""<cr>
+    endif
 
 " ---------- 功能映射 ---------- "
 
@@ -110,15 +120,12 @@
     nnoremap  <leader>nn  <esc>:NERDTree 
     nnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     nnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
-    nnoremap  <leader>nm  <esc>:NERDTreeMirror<cr>
     xnoremap  <leader>nn  <esc>:NERDTree 
     xnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     xnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
-    xnoremap  <leader>nm  <esc>:NERDTreeMirror<cr>
     onoremap  <leader>nn  <esc>:NERDTree 
     onoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     onoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
-    onoremap  <leader>nm  <esc>:NERDTreeMirror<cr>
     
     " easymotion映射 "
     let g:EasyMotion_do_mapping = 0 " 禁用默认映射
@@ -128,6 +135,11 @@
     xnoremap  <leader>t  <Plug>(easymotion-bd-t)
     onoremap  <leader>f  v<Plug>(easymotion-bd-f)
     onoremap  <leader>t  v<Plug>(easymotion-bd-t)
+
+    if has("ide")  " ideavim不支持v-motion操作
+        map <leader>f <Plug>(easymotion-bd-f)
+        map <leader>t <Plug>(easymotion-bd-t)
+    endif
 
     " fzf 映射搜索"
     command! Nmaps call fzf#vim#maps('n', 0)

@@ -146,6 +146,9 @@ let g:EasyMotion_smartcase = 1
 
 " highlightedyank显示时间
 let g:highlightedyank_highlight_duration = 2000
+if has("ide")  " ideavim bug 类型为string
+    let g:highlightedyank_highlight_duration = g:highlightedyank_highlight_duration.""
+endif
 
 " quick-scope 只在f, F, t, T时显示
 let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
