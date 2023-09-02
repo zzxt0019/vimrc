@@ -79,6 +79,19 @@
     xnoremap <silent> / "-y:let @/=@-<cr>/<cr>N
     xnoremap <silent> ? "-y:let @/=@-<cr>?<cr>N
 
+    nnoremap <silent> n :call CommandN('n')<cr>
+    xnoremap <silent> n :call CommandN('n')<cr>
+    onoremap <silent> n :call CommandN('n')<cr>
+    nnoremap <silent> N :call CommandN('N')<cr>
+    xnoremap <silent> N :call CommandN('N')<cr>
+    onoremap <silent> N :call CommandN('N')<cr>
+
+    function! CommandN(n)
+        if @/ != "" && ( a:n == 'n' || a:n == 'N' )
+            execute 'norm! '.a:n
+        endif
+    endfunction
+
 " ---------- 基础映射 ---------- "
 
 " ========== 功能映射 ========== "
