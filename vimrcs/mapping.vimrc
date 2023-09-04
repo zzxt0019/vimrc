@@ -157,7 +157,7 @@
     command! Lmaps call fzf#vim#maps('l', 0)
 
     " multi-cursors "
-    let g:multi_cursor_use_default_mapping=0
+    let g:multi_cursor_use_default_mapping = 0
     let g:multi_cursor_start_word_key      = '<A-n>'
     let g:multi_cursor_select_all_word_key = '<Nop>'
     let g:multi_cursor_start_key           = 'g<A-n>'
