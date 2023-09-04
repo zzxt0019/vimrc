@@ -11,7 +11,7 @@
 
 " ========== 基础映射 ========== "
 
-    " 方向键 禁用方向键(MIT 推荐) "
+    " 禁用方向键(MIT 推荐) "
     noremap   <left>   <nop>
     noremap   <right>  <nop>
     noremap   <up>     <nop>
@@ -21,7 +21,7 @@
     inoremap  <up>     <nop>
     inoremap  <down>   <nop>
 
-    " 方向键 全模式映射 "
+    " 更方便的ctrl操作 - 方向键全模式映射 "
     noremap   <c-h>  <left>
     noremap   <c-j>  <down>
     noremap   <c-k>  <up>
@@ -35,13 +35,17 @@
     cnoremap  <c-k>  <up>
     cnoremap  <c-l>  <right>
 
-    " 方向键 全模式跨词移动 "
+    " 更方便的ctrl操作 - 方向键左右跨词映射 "
     noremap   <c-s-h>  <s-left>
     noremap   <c-s-l>  <s-right>
     inoremap  <c-s-h>  <s-left>
     inoremap  <c-s-l>  <s-right>
     cnoremap  <c-s-h>  <s-left>
     cnoremap  <c-s-l>  <s-right>
+
+    " 更方便的ctrl操作 - 左右删除 "
+    inoremap  <c-n>  <backspace>
+    inoremap  <c-m>  <delete>
 
     " 不常用键映射 "
     nmap  H  ^
@@ -68,8 +72,8 @@
     onoremap  x  "_x
     onoremap  X  "_X
 
+    " 向前的motion 包含当前字符 "
     if !has("ide")  " ideavim不支持v-motion操作
-        " 向前的motion 包含当前字符 "
         onoremap  0  v0
         onoremap  ^  v^
         onoremap  b  vb
@@ -104,10 +108,10 @@
     " Insert模式 jk 退出 "
     inoremap  jk  <esc>
 
+    " 清空搜索 "
     if !has("ide")
-        " 清空搜索 "
         nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
-    elseif  " ideavim bug
+    elseif  " ideavim
         " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次 "
         nnoremap <leader>/ /<cr>``:let @/=""<cr>
     endif
@@ -151,5 +155,16 @@
     command! Omaps call fzf#vim#maps('o', 0)
     command! Tmaps call fzf#vim#maps('t', 0)
     command! Lmaps call fzf#vim#maps('l', 0)
+
+    " multi-cursors "
+    let g:multi_cursor_use_default_mapping=0
+    let g:multi_cursor_start_word_key      = '<A-n>'
+    let g:multi_cursor_select_all_word_key = '<Nop>'
+    let g:multi_cursor_start_key           = 'g<A-n>'
+    let g:multi_cursor_select_all_key      = '<Nop>'
+    let g:multi_cursor_next_key            = '<A-n>'
+    let g:multi_cursor_prev_key            = '<A-p>'
+    let g:multi_cursor_skip_key            = '<A-x>'
+    let g:multi_cursor_quit_key            = '<Esc>'
 
 " ---------- 插件映射 ---------- "
