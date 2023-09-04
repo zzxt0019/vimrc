@@ -110,9 +110,8 @@
     inoremap  jk  <esc>
 
     " 清空搜索 "
-    if !has("ide")
-        nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
-    elseif  " ideavim
+    nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
+    if has("ide")  " ideavim
         " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次 "
         nnoremap <leader>/ /<cr>``:let @/=""<cr>
     endif
