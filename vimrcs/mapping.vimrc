@@ -46,6 +46,7 @@
     " 更方便的ctrl操作 - 左右删除 "
     inoremap  <c-n>  <backspace>
     inoremap  <c-m>  <delete>
+    inoremap  <cr>   <c-m>
 
     " 不常用键映射 "
     nmap  H  ^

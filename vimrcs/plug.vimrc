@@ -5,8 +5,8 @@ Plug 'yianwillis/vimcdoc'
 
 " 主题色
 Plug 'altercation/vim-colors-solarized'
+Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
-Plug 'flazz/vim-colorschemes'
 Plug 'chiendo97/intellij.vim'
 
 " IdeaVim支持的插件
