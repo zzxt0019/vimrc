@@ -46,7 +46,14 @@
     " 更方便的ctrl操作 - 左右删除 "
     inoremap  <c-n>  <backspace>
     inoremap  <c-m>  <delete>
-    inoremap  <cr>   <c-m>
+    cnoremap  <c-n>  <backspace>
+    cnoremap  <c-m>  <delete>
+        " vim bug: 修改<c-m>映射后<cr>也被修改了 "
+        inoremap  <cr>   <c-m>  
+        cnoremap  <cr>   <c-m>  
+
+    " 回车新建一行 "
+    nnoremap  <cr>   o<esc>
 
     " 不常用键映射 "
     nmap  H  ^
@@ -83,21 +90,24 @@
     endif
 
     " 可视模式直接搜索当前选择内容 "
-    xnoremap <silent> / "-y:let @/=@-<cr>/<cr>N
-    xnoremap <silent> ? "-y:let @/=@-<cr>?<cr>N
+    xnoremap  <silent> /  "-y:let @/=@-<cr>/<cr>N
+    xnoremap  <silent> ?  "-y:let @/=@-<cr>?<cr>N
 
     if !has("ide")  " vim bug: @/为空时n/N搜索空格
-        nnoremap <silent> n :call CommandN('n')<cr>
-        xnoremap <silent> n :call CommandN('n')<cr>
-        onoremap <silent> n :call CommandN('n')<cr>
-        nnoremap <silent> N :call CommandN('N')<cr>
-        xnoremap <silent> N :call CommandN('N')<cr>
-        onoremap <silent> N :call CommandN('N')<cr>
+        nnoremap  <silent> n  :call CommandN('n')<cr>
+        xnoremap  <silent> n  :call CommandN('n')<cr>
+        onoremap  <silent> n  :call CommandN('n')<cr>
+        nnoremap  <silent> N  :call CommandN('N')<cr>
+        xnoremap  <silent> N  :call CommandN('N')<cr>
+        onoremap  <silent> N  :call CommandN('N')<cr>
     endif
 
     function! CommandN(n)
         if @/ != "" && ( a:n == 'n' || a:n == 'N' )
-            execute 'norm! '.a:n
+            try
+                execute 'norm! '.a:n
+            catch
+            endtry
         endif
     endfunction
     
@@ -113,7 +123,7 @@
     nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
     if has("ide")  " ideavim
         " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次 "
-        nnoremap <leader>/ /<cr>``:let @/=""<cr>
+        nnoremap  <leader>/  /<cr>``:let @/=""<cr>
     endif
 
 " ---------- 功能映射 ---------- "
