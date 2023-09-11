@@ -43,15 +43,6 @@
     cnoremap  <c-s-h>  <s-left>
     cnoremap  <c-s-l>  <s-right>
 
-    " 更方便的ctrl操作 - 左右删除 "
-    inoremap  <c-n>  <backspace>
-    inoremap  <c-m>  <delete>
-    cnoremap  <c-n>  <backspace>
-    cnoremap  <c-m>  <delete>
-        " vim bug: 修改<c-m>映射后<cr>也被修改了 "
-        inoremap  <cr>   <c-m>  
-        cnoremap  <cr>   <c-m>  
-
     " 回车新建一行 "
     nnoremap  <cr>   o<esc>
 
