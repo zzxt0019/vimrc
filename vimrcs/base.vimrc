@@ -13,7 +13,7 @@ filetype indent on
 
 " Set to auto read when a file is changed from the outside
 set autoread
-au FocusGained,BufEnter * checktime
+autocmd FocusGained,BufEnter * checktime
 
 " 不显示默认启动信息
 set shortmess+=I
