@@ -61,9 +61,10 @@ set lazyredraw
 
 " 取消提示音
 set noerrorbells visualbell t_vb=
-if has("gui_running")
-    autocmd GUIEnter * set vb t_vb=
-endif
+try
+    autocmd GUIEnter * set visualbell t_vb=
+catch
+endtry
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => 颜色字体
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -79,14 +80,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    " onedark "
     colorscheme onedark
-
-    if has("gui_running")
-        " solarized "
-        colorscheme solarized
-        let g:solarized_contrast = "high"
-    endif
 catch
 endtry
 set background=dark
