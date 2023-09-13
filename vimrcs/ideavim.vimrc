@@ -11,7 +11,7 @@ set exchange
 set highlightedyank
 " set vim-paragraph-motion
 " set vim-indent-object
-" set matchit
+set matchit
 set quickscope
 
 

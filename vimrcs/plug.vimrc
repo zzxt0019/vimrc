@@ -5,6 +5,7 @@ Plug 'yianwillis/vimcdoc'
 
 " 主题色
 Plug 'altercation/vim-colors-solarized'
+Plug 'lifepillar/vim-solarized8'
 Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 Plug 'chiendo97/intellij.vim'
@@ -23,6 +24,7 @@ Plug 'tommcdo/vim-exchange'             " 交换文本 [command] cx
 Plug 'machakann/vim-highlightedyank'    " 复制高亮
 " Plug 'dbakker/vim-paragraph-motion'
 " Plug 'michaeljsmith/vim-indent-object'
+Plug 'chrisbra/matchit'
 Plug 'unblevable/quick-scope'           " 高亮每个单词中唯一的字符
 
 " 其他插件
@@ -34,4 +36,5 @@ Plug 'junegunn/fzf',                    " fzf
      \ { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'                 " fzf
 Plug 'mhinz/vim-startify'               " 开启时打开最近文件
+Plug 'scrooloose/syntastic'
 call plug#end()
