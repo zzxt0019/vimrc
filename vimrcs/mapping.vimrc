@@ -66,10 +66,6 @@
     xnoremap  S  "_S
     xnoremap  x  "_x
     xnoremap  X  "_X
-    onoremap  s  "_s
-    onoremap  S  "_S
-    onoremap  x  "_x
-    onoremap  X  "_X
 
     " 向前的motion 包含当前字符 "
     if !has("ide")  " ideavim不支持v-motion操作
