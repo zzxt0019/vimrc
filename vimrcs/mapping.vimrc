@@ -35,17 +35,6 @@
     cnoremap  <c-k>  <up>
     cnoremap  <c-l>  <right>
 
-    if has("gui_running") || has("ide")
-        " 终端不支持 (与<c-h>, <c-l>冲突)"
-        " 更方便的ctrl操作 - 方向键左右跨词映射 "
-        noremap   <c-s-h>  <s-left>
-        noremap   <c-s-l>  <s-right>
-        inoremap  <c-s-h>  <s-left>
-        inoremap  <c-s-l>  <s-right>
-        cnoremap  <c-s-h>  <s-left>
-        cnoremap  <c-s-l>  <s-right>
-    endif
-
     " 回车新建一行 "
     nnoremap  <cr>   o<esc>
 
