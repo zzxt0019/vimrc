@@ -11,53 +11,31 @@
 
 " ========== 基础映射 ========== "
 
-    " 禁用方向键(MIT 推荐) "
-    noremap   <left>   <nop>
-    noremap   <right>  <nop>
-    noremap   <up>     <nop>
-    noremap   <down>   <nop>
-    inoremap  <left>   <nop>
-    inoremap  <right>  <nop>
-    inoremap  <up>     <nop>
-    inoremap  <down>   <nop>
+    " 禁用方向键 "
+    noremap <left>  <nop>|inoremap <left>  <nop>|inoremap <left>  <nop>
+    noremap <right> <nop>|inoremap <right> <nop>|inoremap <right> <nop>
+    noremap <up>    <nop>|inoremap <up>    <nop>|inoremap <up>    <nop>
+    noremap <down>  <nop>|inoremap <down>  <nop>|inoremap <down>  <nop>
 
     " 更方便的ctrl操作 - 方向键全模式映射 "
-    noremap   <c-h>  <left>
-    noremap   <c-j>  <down>
-    noremap   <c-k>  <up>
-    noremap   <c-l>  <right>
-    inoremap  <c-h>  <left>
-    inoremap  <c-j>  <down>
-    inoremap  <c-k>  <up>
-    inoremap  <c-l>  <right>
-    cnoremap  <c-h>  <left>
-    cnoremap  <c-j>  <down>
-    cnoremap  <c-k>  <up>
-    cnoremap  <c-l>  <right>
+    noremap <c-h>  <left>|inoremap <c-h>  <left>|cnoremap <c-h>  <left>
+    noremap <c-j>  <down>|inoremap <c-j>  <down>|cnoremap <c-j>  <down>
+    noremap <c-k>    <up>|inoremap <c-k>    <up>|cnoremap <c-k>    <up>
+    noremap <c-l> <right>|inoremap <c-l> <right>|cnoremap <c-l> <right>
+
+    " 不常用键映射 "
+    nmap  H  ^|xmap  H  ^|omap  H  ^
+    nmap  L  $|xmap  L  $|omap  L  $
+    nmap  M  %|xmap  M  %|omap  M  %
+    
+    " s和x删除不进入缓存 "
+    nnoremap  s  "_s|xnoremap  s  "_s
+    nnoremap  S  "_S|xnoremap  S  "_S
+    nnoremap  x  "_x|xnoremap  x  "_x
+    nnoremap  X  "_X|xnoremap  X  "_X
 
     " 回车新建一行 "
     nnoremap  <cr>   o<esc>
-
-    " 不常用键映射 "
-    nmap  H  ^
-    nmap  L  $
-    nmap  M  %
-    xmap  H  ^
-    xmap  L  $
-    xmap  M  %
-    omap  H  ^
-    omap  L  $
-    omap  M  %
-    
-    " s和x删除不进入缓存 "
-    nnoremap  s  "_s
-    nnoremap  S  "_S
-    nnoremap  x  "_x
-    nnoremap  X  "_X
-    xnoremap  s  "_s
-    xnoremap  S  "_S
-    xnoremap  x  "_x
-    xnoremap  X  "_X
 
     " 向前的motion 包含当前字符 "
     if !has("ide")  " ideavim不支持v-motion操作
