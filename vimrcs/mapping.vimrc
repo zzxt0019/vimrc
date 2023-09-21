@@ -65,9 +65,14 @@
 " ========== 功能映射 ==========
 
     " 不常用键映射
-    nnoremap  H  ^|xnoremap  H  ^|onoremap  H  ^
-    nnoremap  L  $|xnoremap  L  $|onoremap  L  $
-    nnoremap  M  %|xnoremap  M  %|onoremap  M  %
+    nnoremap H ^|xnoremap H ^|onoremap H ^
+    nnoremap L $|xnoremap L $|onoremap L $
+    nnoremap M %|xnoremap M %|onoremap M %
+
+    " 不常用g映射
+    nnoremap gj 10j|xnoremap gj 10j|onoremap gj 10j
+    nnoremap gk 10k|xnoremap gk 10k|onoremap gk 10k
+
 
     " 回车新建一行
     nnoremap  <cr>   o<esc>
