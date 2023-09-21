@@ -1,41 +1,37 @@
-" ========== leader映射 =========== "
+" ========== leader键 ===========
 
     let g:mapleader="'"
-    " 取消当前leader键的原始功能 "
+    " 取消当前leader键的原始功能
     nnoremap '  <nop>|xnoremap '  <nop>|onoremap '  <nop>
     nnoremap '' <nop>|xnoremap '' <nop>|onoremap '' <nop>
 
-" ---------- leader映射 ----------- "
+" ---------- leader键 ----------- 
 
-" ========== 基础映射 ========== "
-
+" ========== 方向键映射 ==========
+"
     " 禁用方向键 "
-    noremap <left>  <nop>|inoremap <left>  <nop>|inoremap <left>  <nop>
-    noremap <right> <nop>|inoremap <right> <nop>|inoremap <right> <nop>
-    noremap <up>    <nop>|inoremap <up>    <nop>|inoremap <up>    <nop>
-    noremap <down>  <nop>|inoremap <down>  <nop>|inoremap <down>  <nop>
+    noremap <left>  <nop>|noremap! <left>  <nop>
+    noremap <right> <nop>|noremap! <right> <nop>
+    noremap <up>    <nop>|noremap! <up>    <nop>
+    noremap <down>  <nop>|noremap! <down>  <nop>
 
     " 更方便的ctrl操作 - 方向键全模式映射 "
-    noremap <c-h>  <left>|inoremap <c-h>  <left>|cnoremap <c-h>  <left>
-    noremap <c-j>  <down>|inoremap <c-j>  <down>|cnoremap <c-j>  <down>
-    noremap <c-k>    <up>|inoremap <c-k>    <up>|cnoremap <c-k>    <up>
-    noremap <c-l> <right>|inoremap <c-l> <right>|cnoremap <c-l> <right>
+    noremap <c-h>  <left>|noremap! <c-h>  <left>
+    noremap <c-j>  <down>|noremap! <c-j>  <down>
+    noremap <c-k>    <up>|noremap! <c-k>    <up>
+    noremap <c-l> <right>|noremap! <c-l> <right>
 
-    " 不常用键映射 "
-    nmap  H  ^|xmap  H  ^|omap  H  ^
-    nmap  L  $|xmap  L  $|omap  L  $
-    nmap  M  %|xmap  M  %|omap  M  %
-    
-    " s和x删除不进入缓存 "
+" ---------- 方向键映射 -----------
+
+" ========== 基础映射 ==========
+
+    " s和x删除 => 不进入缓存
     nnoremap  s  "_s|xnoremap  s  "_s
     nnoremap  S  "_S|xnoremap  S  "_S
     nnoremap  x  "_x|xnoremap  x  "_x
     nnoremap  X  "_X|xnoremap  X  "_X
 
-    " 回车新建一行 "
-    nnoremap  <cr>   o<esc>
-
-    " 向前的motion 包含当前字符 "
+    " 向前的motion => 包含当前字符
     if !has("ide")  " ideavim不支持v-motion操作
         onoremap  0  v0
         onoremap  ^  v^
@@ -44,11 +40,8 @@
         onoremap  T  vT
     endif
 
-    " 可视模式直接搜索当前选择内容 "
-    xnoremap  <silent> /  "-y:let @/=@-<cr>/<cr>N
-    xnoremap  <silent> ?  "-y:let @/=@-<cr>?<cr>N
-
-    if !has("ide")  " vim bug: @/为空时n/N搜索空格
+    " @/为空时n/N搜索 => 不报错
+    if !has("ide")  " ideavim不存在这个问题
         nnoremap  <silent> n  :call CommandN('n')<cr>
         xnoremap  <silent> n  :call CommandN('n')<cr>
         onoremap  <silent> n  :call CommandN('n')<cr>
@@ -67,25 +60,37 @@
     endfunction
     
 
-" ---------- 基础映射 ---------- "
+" ---------- 基础映射 ----------
 
-" ========== 功能映射 ========== "
+" ========== 功能映射 ==========
 
-    " Insert模式 jk 退出 "
+    " 不常用键映射
+    nnoremap  H  ^|xnoremap  H  ^|onoremap  H  ^
+    nnoremap  L  $|xnoremap  L  $|onoremap  L  $
+    nnoremap  M  %|xnoremap  M  %|onoremap  M  %
+
+    " 回车新建一行
+    nnoremap  <cr>   o<esc>
+
+    " 可视模式直接搜索当前选择内容
+    xnoremap  <silent> /  "-y:let @/=@-<cr>/<cr>N
+    xnoremap  <silent> ?  "-y:let @/=@-<cr>?<cr>N
+
+    " Insert模式 jk 退出
     inoremap  jk  <esc>
 
-    " 清空搜索 "
+    " 清空搜索
     nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
     if has("ide")  " ideavim
-        " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次 "
+        " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次
         nnoremap  <leader>/  /<cr>``:let @/=""<cr>
     endif
 
-" ---------- 功能映射 ---------- "
+" ---------- 功能映射 ----------
 
-" ========== 插件映射 ========== "
+" ========== 插件映射 ==========
 
-    " NERDTree映射 "
+    " NERDTree映射
     nnoremap  <leader>nn  <esc>:NERDTree 
     nnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     nnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
@@ -96,7 +101,7 @@
     onoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     onoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
     
-    " easymotion映射 "
+    " easymotion映射
     let g:EasyMotion_do_mapping = 0 " 禁用默认映射
     nnoremap  <leader>f  <Plug>(easymotion-bd-f)
     nnoremap  <leader>t  <Plug>(easymotion-bd-t)
@@ -110,7 +115,7 @@
         map <leader>t <Plug>(easymotion-bd-t)
     endif
 
-    " fzf 映射搜索"
+    " fzf 映射搜索
     command! Nmaps call fzf#vim#maps('n', 0)
     command! Imaps call fzf#vim#maps('i', 0)
     command! Cmaps call fzf#vim#maps('c', 0)
@@ -121,7 +126,7 @@
     command! Tmaps call fzf#vim#maps('t', 0)
     command! Lmaps call fzf#vim#maps('l', 0)
 
-    " multi-cursors "
+    " multi-cursors
     let g:multi_cursor_use_default_mapping = 0
     let g:multi_cursor_start_word_key      = '<A-n>'
     let g:multi_cursor_select_all_word_key = '<Nop>'
@@ -132,4 +137,4 @@
     let g:multi_cursor_skip_key            = '<A-x>'
     let g:multi_cursor_quit_key            = '<Esc>'
 
-" ---------- 插件映射 ---------- "
+" ---------- 插件映射 ----------
