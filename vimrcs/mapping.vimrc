@@ -10,16 +10,16 @@
 " ========== 方向键映射 ==========
 "
     " 禁用方向键 "
-    noremap <left>  <nop>|noremap! <left>  <nop>
-    noremap <right> <nop>|noremap! <right> <nop>
-    noremap <up>    <nop>|noremap! <up>    <nop>
-    noremap <down>  <nop>|noremap! <down>  <nop>
+    noremap <left>  <nop>|inoremap <left>  <nop>|cnoremap <left>  <nop>
+    noremap <right> <nop>|inoremap <right> <nop>|cnoremap <right> <nop>
+    noremap <up>    <nop>|inoremap <up>    <nop>|cnoremap <up>    <nop>
+    noremap <down>  <nop>|inoremap <down>  <nop>|cnoremap <down>  <nop>
 
     " 更方便的ctrl操作 - 方向键全模式映射 "
-    noremap <c-h>  <left>|noremap! <c-h>  <left>
-    noremap <c-j>  <down>|noremap! <c-j>  <down>
-    noremap <c-k>    <up>|noremap! <c-k>    <up>
-    noremap <c-l> <right>|noremap! <c-l> <right>
+    noremap <c-h>  <left>|inoremap <c-h>  <left>|cnoremap <c-h>  <left>
+    noremap <c-j>  <down>|inoremap <c-j>  <down>|cnoremap <c-j>  <down>
+    noremap <c-k>    <up>|inoremap <c-k>    <up>|cnoremap <c-k>    <up>
+    noremap <c-l> <right>|inoremap <c-l> <right>|cnoremap <c-l> <right>
 
 " ---------- 方向键映射 -----------
 
