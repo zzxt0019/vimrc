@@ -60,7 +60,9 @@ set ignorecase smartcase hlsearch incsearch
 set lazyredraw
 
 " 取消提示音
-set noerrorbells visualbell t_vb=
+set noerrorbells 
+set visualbell 
+set t_vb=
 try
     autocmd GUIEnter * set visualbell t_vb=
 catch
