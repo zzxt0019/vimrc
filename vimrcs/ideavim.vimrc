@@ -12,14 +12,14 @@ map <space>n <Action>(NewElement)
 " 全局查找 
 map <space>f <Action>(FindInPath)
 " 整行上下移动
-map <space>j <Action>(MoveStatementDown)
-map <space>k <Action>(MoveStatementUp)
+map <space>j <Action>(MoveStatementDown)<space>
+map <space>k <Action>(MoveStatementUp)<space>
 " 补全 c-s-enter
-map <space><enter> <Action>(EditorCompleteStatement)
+map <space><enter> <Action>(EditorCompleteStatement)<space>
 " 优化导入 c-a-o
-map <space>o <Action>(OptimizeImports)
+map <space>o <Action>(OptimizeImports)<space>
 " 格式化 c-a-l
-map <space>l <Action>(ReformatCode)
+map <space>l <Action>(ReformatCode)<space>
 
 " idea更好的实现 
 map <c-o>    <Action>(Back)
