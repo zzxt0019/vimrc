@@ -20,6 +20,8 @@ map <space><enter> <Action>(EditorCompleteStatement)<space>
 map <space>o <Action>(OptimizeImports)<space>
 " 格式化 c-a-l
 map <space>l <Action>(ReformatCode)<space>
+" 环绕 c-a-t
+map <space>t <Action>(SurroundWith)
 
 " idea更好的实现 
 map <c-o>    <Action>(Back)
