@@ -24,6 +24,12 @@ Plug 'machakann/vim-highlightedyank'    " 复制高亮
 " Plug 'michaeljsmith/vim-indent-object'
 Plug 'chrisbra/matchit'
 Plug 'unblevable/quick-scope'           " 高亮每个单词中唯一的字符
+Plug 'liuchengxu/vim-which-key'|set timeout  " 显示组合键
+if has("ide") 
+    set which-key
+    " 原版要打开timeout, 但idea的which-key要关闭timeout
+    set notimeout
+endif
 
 " 其他插件
 Plug 'ZSaberLv0/vim-easymotion-chs'     " easymotion中文扩展

@@ -1,10 +1,12 @@
 " ========== leader键 ===========
 
     let g:mapleader="'"
-    " 取消当前leader键的原始功能
-    nnoremap '  <nop>|xnoremap '  <nop>|onoremap '  <nop>
-    nnoremap '' <nop>|xnoremap '' <nop>|onoremap '' <nop>
-
+    if has("idea")
+        nmap '' '|xmap '' '|omap '' '
+    else 
+        nnoremap <silent> <leader> :WhichKey "'"<cr>
+        vnoremap <silent> <leader> :WhichKeyVisual "'"<cr>
+    endif
 " ---------- leader键 ----------- 
 
 " ========== 方向键映射 ==========
