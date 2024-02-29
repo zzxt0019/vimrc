@@ -1,12 +1,8 @@
 " ========== leader键 ===========
 
     let g:mapleader="'"
-    if has("idea")
-        nmap '' '|xmap '' '|omap '' '
-    else 
-        nnoremap <silent> <leader> :WhichKey "'"<cr>
-        vnoremap <silent> <leader> :WhichKeyVisual "'"<cr>
-    endif
+    nmap '' '|xmap '' '|omap '' '
+
 " ---------- leader键 ----------- 
 
 " ========== 方向键映射 ==========
