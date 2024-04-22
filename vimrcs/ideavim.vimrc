@@ -22,6 +22,10 @@ map <space>o <Action>(OptimizeImports)
 map <space>l <Action>(ReformatCode)
 " 环绕 c-a-t
 map <space>t <Action>(SurroundWith)
+" 方法跳转到子类实现
+map <c-n> <Action>(GotoImplementation)
+" 方法跳转到父类定义
+map <c-m> <Action>(GotoSuperMethod)
 
 " idea更好的实现 
 map <c-o>    <Action>(Back)
