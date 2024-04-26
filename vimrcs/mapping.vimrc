@@ -81,9 +81,10 @@
 
     " Insert模式 jk 退出
     inoremap  jk  <esc>
+    inoremap  jj  j
 
     " 清空搜索
-    nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
+    nnoremap  <silent> <leader>/  <esc>:let @/=""<cr>
     if has("ide")  " ideavim
         " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次
         nnoremap  <leader>/  /<cr>``:let @/=""<cr>
