@@ -6,12 +6,6 @@
 " ---------- leader键 ----------- 
 
 " ========== 方向键映射 ==========
-"
-    " 禁用方向键 "
-    " noremap <left>  <nop>|inoremap <left>  <nop>|cnoremap <left>  <nop>
-    " noremap <right> <nop>|inoremap <right> <nop>|cnoremap <right> <nop>
-    " noremap <up>    <nop>|inoremap <up>    <nop>|cnoremap <up>    <nop>
-    " noremap <down>  <nop>|inoremap <down>  <nop>|cnoremap <down>  <nop>
 
     " 更方便的ctrl操作 - 方向键全模式映射 "
     noremap <c-h>  <left>|inoremap <c-h>  <left>|cnoremap <c-h>  <left>
@@ -57,7 +51,6 @@
         endif
     endfunction
     
-
 " ---------- 基础映射 ----------
 
 " ========== 功能映射 ==========
@@ -65,15 +58,11 @@
     " 不常用键映射
     nnoremap H ^|xnoremap H ^|onoremap H ^
     nnoremap L $|xnoremap L $|onoremap L $
-    nnoremap M %|xnoremap M %|onoremap M %
+    nmap M %|xmap M %|omap M %
 
     " 不常用g映射
     nnoremap gj 10j|xnoremap gj 10j|onoremap gj 10j
     nnoremap gk 10k|xnoremap gk 10k|onoremap gk 10k
-
-
-    " 回车新建一行
-    " nnoremap  <cr>   o<esc>
 
     " 可视模式直接搜索当前选择内容
     xnoremap  <silent> /  "-y:let @/=@-<cr>/<cr>N
