@@ -22,6 +22,8 @@ map <space>o <Action>(OptimizeImports)
 map <space>l <Action>(ReformatCode)
 " 环绕 c-a-t
 map <space>t <Action>(SurroundWith)
+" 提示 a-enter
+map <space>i <Action>(ShowIntentionActions)
 " 方法跳转到子类实现
 map <c-n> <Action>(GotoImplementation)
 " 方法跳转到父类定义
