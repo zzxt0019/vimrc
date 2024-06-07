@@ -32,6 +32,7 @@ map <c-r>    <Action>($Redo)
 
 
 " 通过命令模式实现一些不常用的功能(必须大写开头)
+
 " :Reload 重新加载ideavimrc
 command! Reload call IdeaReloadVimRc()
 function! IdeaReloadVimRc()
@@ -54,4 +55,16 @@ endfunction
 command! New call IdeaNewElement()
 function! IdeaNewElement()
     action NewElement
+endfunction
+" :MavenReload 重新加载maven
+command! MavenReload call IdeaMavenReload()
+function! IdeaMavenReload()
+    action Maven.Reimport
+    action Maven.UpdateFolders
+endfunction
+
+" :Vim 关闭ideavim
+command! Vim call IdeaVimPluginToggle()
+function! IdeaVimPluginToggle()
+    action VimPluginToggle
 endfunction

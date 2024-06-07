@@ -166,4 +166,3 @@ if has("gui_running") && (has("win64") || has("win32"))
   set columns=120 " 设置宽度
   set lines=30 " 设置高度
 endif
-
