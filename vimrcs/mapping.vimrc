@@ -7,11 +7,17 @@
 
 " ========== 方向键映射 ==========
 
-    " 更方便的ctrl操作 - 方向键全模式映射 "
-    noremap <c-h>  <left>|inoremap <c-h>  <left>|cnoremap <c-h>  <left>
-    noremap <c-j>  <down>|inoremap <c-j>  <down>|cnoremap <c-j>  <down>
-    noremap <c-k>    <up>|inoremap <c-k>    <up>|cnoremap <c-k>    <up>
-    noremap <c-l> <right>|inoremap <c-l> <right>|cnoremap <c-l> <right>
+    if g:hhkb == 0 || g:linux_shell == 0
+        noremap <left>  <nop>|inoremap <left>  <nop>|cnoremap <left>  <nop>
+        noremap <right> <nop>|inoremap <right> <nop>|cnoremap <right> <nop>
+        noremap <up>    <nop>|inoremap <up>    <nop>|cnoremap <up>    <nop>
+        noremap <down>  <nop>|inoremap <down>  <nop>|cnoremap <down>  <nop>
+
+        noremap <c-h>  <left>|inoremap <c-h>  <left>|cnoremap <c-h>  <left>
+        noremap <c-j>  <down>|inoremap <c-j>  <down>|cnoremap <c-j>  <down>
+        noremap <c-k>    <up>|inoremap <c-k>    <up>|cnoremap <c-k>    <up>
+        noremap <c-l> <right>|inoremap <c-l> <right>|cnoremap <c-l> <right>
+    endif
 
 " ---------- 方向键映射 -----------
 
@@ -68,9 +74,11 @@
     xnoremap  <silent> /  "-y:let @/=@-<cr>/<cr>N
     xnoremap  <silent> ?  "-y:let @/=@-<cr>?<cr>N
 
-    " Insert模式 jk 退出
-    inoremap  jk  <esc>
-    inoremap  jj  j
+    if g:hhkb == 0
+        " Insert模式 jk 退出
+        inoremap  jk  <esc>
+        inoremap  jj  j
+    endif
 
     " 清空搜索
     nnoremap  <silent> <leader>/  <esc>:let @/=""<cr>

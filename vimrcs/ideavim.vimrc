@@ -34,37 +34,21 @@ map <c-r>    <Action>($Redo)
 " 通过命令模式实现一些不常用的功能(必须大写开头)
 
 " :Reload 重新加载ideavimrc
-command! Reload call IdeaReloadVimRc()
-function! IdeaReloadVimRc()
-    action IdeaVim.ReloadVimRc.reload
-endfunction
-
-" :Run 
-command! Run call IdeaRun()
-function! IdeaRun()
-    action Run
-endfunction
-
-" :Debug
-command! Debug call IdeaDebug()
-function! IdeaDebug()
-    action Debug
-endfunction
-
+command! Reload call IdeaVimAction('IdeaVim.ReloadVimRc.reload')
+" Run
+command! Run call IdeaVimAction('Run')
+" Debug
+command! Debug call IdeaVimAction('Debug')
 " :New 新建文件
-command! New call IdeaNewElement()
-function! IdeaNewElement()
-    action NewElement
-endfunction
+command! New call IdeaVimAction('NewElement')
 " :MavenReload 重新加载maven
-command! MavenReload call IdeaMavenReload()
-function! IdeaMavenReload()
-    action Maven.Reimport
-    action Maven.UpdateFolders
-endfunction
-
+command! MavenReload call IdeaVimAction('Maven.Reimport Maven.UpdateFolders')
 " :Vim 关闭ideavim
-command! Vim call IdeaVimPluginToggle()
-function! IdeaVimPluginToggle()
-    action VimPluginToggle
+command! Vim call IdeaVimAction('VimPluginToggle')
+
+function! IdeaVimAction(actions)
+    let l:actions = split(a:actions, ' ') 
+    for action in l:actions
+        execute 'action '.l:action
+    endfor
 endfunction
