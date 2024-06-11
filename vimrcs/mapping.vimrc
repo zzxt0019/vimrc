@@ -7,7 +7,7 @@
 
 " ========== 方向键映射 ==========
 
-    if g:hhkb == 0 || g:linux_shell == 0
+    if g:hhkb == 0 && g:linux_shell == 0
         noremap <left>  <nop>|inoremap <left>  <nop>|cnoremap <left>  <nop>
         noremap <right> <nop>|inoremap <right> <nop>|cnoremap <right> <nop>
         noremap <up>    <nop>|inoremap <up>    <nop>|cnoremap <up>    <nop>
