@@ -29,15 +29,6 @@
     nnoremap  x  "_x|xnoremap  x  "_x
     nnoremap  X  "_X|xnoremap  X  "_X
 
-    " 向前的motion => 包含当前字符
-    if !has("ide")  " ideavim不支持v-motion操作
-        onoremap  0  v0
-        onoremap  ^  v^
-        onoremap  b  vb
-        onoremap  F  vF
-        onoremap  T  vT
-    endif
-
     " @/为空时n/N搜索 => 不报错
     if !has("ide")  " ideavim不存在这个问题
         nnoremap  <silent> n  :call CommandN('n')<cr>
@@ -104,17 +95,12 @@
     
     " easymotion映射
     let g:EasyMotion_do_mapping = 0 " 禁用默认映射
-    nnoremap  <leader>f  <Plug>(easymotion-bd-f)
-    nnoremap  <leader>t  <Plug>(easymotion-bd-t)
-    xnoremap  <leader>f  <Plug>(easymotion-bd-f)
-    xnoremap  <leader>t  <Plug>(easymotion-bd-t)
-    onoremap  <leader>f  v<Plug>(easymotion-bd-f)
-    onoremap  <leader>t  v<Plug>(easymotion-bd-t)
-
-    if has("ide")  " ideavim不支持v-motion操作
-        map <leader>f <Plug>(easymotion-bd-f)
-        map <leader>t <Plug>(easymotion-bd-t)
-    endif
+    nmap  <leader>f  <Plug>(easymotion-bd-f)
+    nmap  <leader>t  <Plug>(easymotion-bd-t)
+    xmap  <leader>f  <Plug>(easymotion-bd-f)
+    xmap  <leader>t  <Plug>(easymotion-bd-t)
+    omap  <leader>f  <Plug>(easymotion-bd-f)
+    omap  <leader>t  <Plug>(easymotion-bd-t)
 
     " fzf 映射搜索
     command! Nmaps call fzf#vim#maps('n', 0)
