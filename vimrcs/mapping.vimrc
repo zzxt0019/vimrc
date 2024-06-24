@@ -24,19 +24,15 @@
 " ========== 基础映射 ==========
 
     " s和x删除 => 不进入缓存
-    nnoremap  s  "_s|xnoremap  s  "_s
-    nnoremap  S  "_S|xnoremap  S  "_S
-    nnoremap  x  "_x|xnoremap  x  "_x
-    nnoremap  X  "_X|xnoremap  X  "_X
+    noremap  s  "_s
+    noremap  S  "_S
+    noremap  x  "_x
+    noremap  X  "_X
 
     " @/为空时n/N搜索 => 不报错
     if !has("ide")  " ideavim不存在这个问题
-        nnoremap  <silent> n  :call CommandN('n')<cr>
-        xnoremap  <silent> n  :call CommandN('n')<cr>
-        onoremap  <silent> n  :call CommandN('n')<cr>
-        nnoremap  <silent> N  :call CommandN('N')<cr>
-        xnoremap  <silent> N  :call CommandN('N')<cr>
-        onoremap  <silent> N  :call CommandN('N')<cr>
+        noremap  <silent> n  :call CommandN('n')<cr>
+        noremap  <silent> N  :call CommandN('N')<cr>
     endif
 
     function! CommandN(n)
@@ -53,13 +49,13 @@
 " ========== 功能映射 ==========
 
     " 不常用键映射
-    nnoremap H ^|xnoremap H ^|onoremap H ^
-    nnoremap L $|xnoremap L $|onoremap L $
-    nmap M %|xmap M %|omap M %
+    noremap H ^
+    noremap L $
+    map M %
 
     " 不常用g映射
-    nnoremap gj 10j|xnoremap gj 10j|onoremap gj 10j
-    nnoremap gk 10k|xnoremap gk 10k|onoremap gk 10k
+    noremap gj 10j
+    noremap gk 10k
 
     " 可视模式直接搜索当前选择内容
     xnoremap  <silent> /  "-y:let @/=@-<cr>/<cr>N
@@ -75,7 +71,7 @@
     nnoremap  <silent> <leader>/  <esc>:let @/=""<cr>
     if has("ide")  " ideavim
         " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次
-        nnoremap  <leader>/  /e11808e88edc581b56b0191fecfed368<cr>:let @/="":let @/=""<cr>
+        nnoremap  <leader>/  /e11808e88edc581b56b0191fecfed368<cr>:let @/=""<cr>
     endif
 
 " ---------- 功能映射 ----------
@@ -86,21 +82,11 @@
     nnoremap  <leader>nn  <esc>:NERDTree 
     nnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     nnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
-    xnoremap  <leader>nn  <esc>:NERDTree 
-    xnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
-    xnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
-    onoremap  <leader>nn  <esc>:NERDTree 
-    onoremap  <leader>nf  <esc>:NERDTreeFind<cr>
-    onoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
     
     " easymotion映射
     let g:EasyMotion_do_mapping = 0 " 禁用默认映射
-    nmap  <leader>f  <Plug>(easymotion-bd-f)
-    nmap  <leader>t  <Plug>(easymotion-bd-t)
-    xmap  <leader>f  <Plug>(easymotion-bd-f)
-    xmap  <leader>t  <Plug>(easymotion-bd-t)
-    omap  <leader>f  <Plug>(easymotion-bd-f)
-    omap  <leader>t  <Plug>(easymotion-bd-t)
+    map  <leader>f  <Plug>(easymotion-bd-f)
+    map  <leader>t  <Plug>(easymotion-bd-t)
 
     " fzf 映射搜索
     command! Nmaps call fzf#vim#maps('n', 0)
@@ -125,3 +111,6 @@
     let g:multi_cursor_quit_key            = '<Esc>'
 
 " ---------- 插件映射 ----------
+" ========== 清除选择模式 ==========
+    smapclear
+" ---------- 清除选择模式 ----------

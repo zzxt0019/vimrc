@@ -1,5 +1,5 @@
 set lookupkeys=<Tab>,<Down>,<Up>,<Enter>,<Left>,<Right>,<C-Down>,<C-Up>,<PageUp>,<PageDown>,<C-Q>
-" set trackactionids
+set trackactionids
 
 
 map <space> <nop>|xmap <space> <nop>|omap <space> <nop>
@@ -37,6 +37,9 @@ map <c-r>    <Action>($Redo)
 command! Reload call IdeaVimAction('IdeaVim.ReloadVimRc.reload')
 " Run
 command! Run call IdeaVimAction('Run')
+" RunClass
+command! Runc call IdeaVimAction('RunClass')
+command! RunClass call IdeaVimAction('RunClass')
 " Debug
 command! Debug call IdeaVimAction('Debug')
 " :New 新建文件
