@@ -24,6 +24,7 @@ Plug 'machakann/vim-highlightedyank'    " 复制高亮
 " Plug 'michaeljsmith/vim-indent-object'
 Plug 'chrisbra/matchit'
 Plug 'unblevable/quick-scope'           " 高亮每个单词中唯一的字符
+" Plug 'liuchengxu/vim-which-key'         " 实时显示组合键
 
 " 其他插件
 Plug 'ZSaberLv0/vim-easymotion-chs'     " easymotion中文扩展
