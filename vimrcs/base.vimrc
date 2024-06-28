@@ -167,6 +167,3 @@ if has("gui_running") && (has("win64") || has("win32"))
   set lines=30 " 设置高度
 endif
 
-" 自定义环境参数
-let g:linux_shell = 0  " linux shell环境
-let g:hhkb = 1  " hhkb环境
