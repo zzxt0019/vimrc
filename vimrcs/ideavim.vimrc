@@ -41,8 +41,6 @@ command! Runc call IdeaVimAction('RunClass')
 command! RunClass call IdeaVimAction('RunClass')
 " Debug
 command! Debug call IdeaVimAction('Debug')
-" :New 新建文件
-command! New call IdeaVimAction('NewElement')
 " :MavenReload 重新加载maven
 command! MavenReload call IdeaVimAction('Maven.Reimport Maven.UpdateFolders')
 " :Vim 关闭ideavim
