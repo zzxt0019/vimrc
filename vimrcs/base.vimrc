@@ -167,3 +167,6 @@ if has("gui_running") && (has("win64") || has("win32"))
   set lines=30 " 设置高度
 endif
 
+" 自定义参数
+let g:linux_shell = 0  " 当前是运维环境
+let g:hhkb = 1  " 当前使用hhkb

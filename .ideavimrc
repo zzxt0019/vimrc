@@ -1,4 +1,3 @@
-source ~/vimfiles/vimrcs/env.vimrc
 source ~/vimfiles/vimrcs/plug.vimrc
 source ~/vimfiles/vimrcs/base.vimrc
 source ~/vimfiles/vimrcs/mapping.vimrc
