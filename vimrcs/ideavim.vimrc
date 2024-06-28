@@ -32,18 +32,21 @@ map <c-r>    <Action>($Redo)
 
 " 通过命令模式实现一些不常用的功能(必须大写开头)
 
-" :Reload 重新加载ideavimrc
+" Reload 重新加载ideavimrc
 command! Reload call IdeaVimAction('IdeaVim.ReloadVimRc.reload')
 " Run
 command! Run call IdeaVimAction('Run')
 " RunClass
-command! Runc call IdeaVimAction('RunClass')
 command! RunClass call IdeaVimAction('RunClass')
 " Debug
 command! Debug call IdeaVimAction('Debug')
-" :MavenReload 重新加载maven
+" Stop
+command! Stop call IdeaVimAction('Stop')
+" ActivateTerminalToolWindow 打开终端
+command! Terminal call IdeaVimAction('ActivateTerminalToolWindow')
+" MavenReload 重新加载maven
 command! MavenReload call IdeaVimAction('Maven.Reimport Maven.UpdateFolders')
-" :Vim 关闭ideavim
+" Vim 关闭ideavim
 command! Vim call IdeaVimAction('VimPluginToggle')
 
 function! IdeaVimAction(actions)
