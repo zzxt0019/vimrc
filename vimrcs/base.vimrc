@@ -62,12 +62,8 @@ set lazyredraw
 
 " 取消提示音
 set noerrorbells 
-set visualbell 
-set t_vb=
-try
-    autocmd GUIEnter * set visualbell t_vb=
-catch
-endtry
+set visualbell
+autocmd VimEnter * set t_vb=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => 颜色字体
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
