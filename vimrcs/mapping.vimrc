@@ -53,10 +53,6 @@
     noremap L $
     map M %
 
-    " 不常用g映射
-    noremap gj 10j
-    noremap gk 10k
-
     " 可视模式直接搜索当前选择内容
     xnoremap  <silent> /  <esc>:call Vsearch('/')<cr>
     xnoremap  <silent> ?  <esc>:call Vsearch('?')<cr>
