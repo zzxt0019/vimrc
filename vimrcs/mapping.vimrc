@@ -58,8 +58,15 @@
     noremap gk 10k
 
     " 可视模式直接搜索当前选择内容
-    xnoremap  <silent> /  "-y:let @/=@-<cr>/<cr>N
-    xnoremap  <silent> ?  "-y:let @/=@-<cr>?<cr>N
+    xnoremap  <silent> /  <esc>:call Vsearch('/')<cr>
+    xnoremap  <silent> ?  <esc>:call Vsearch('?')<cr>
+    function Vsearch(search)
+        let l:temp = @"
+        normal! gvy
+        let @/ = @"
+        let @" = l:temp
+        execute 'normal! '.a:search.'<cr>N'
+    endfunction
 
     if g:hhkb == 0
         " Insert模式 jk 退出
