@@ -23,7 +23,7 @@ Plug 'machakann/vim-highlightedyank'    " 复制高亮
 " Plug 'dbakker/vim-paragraph-motion'
 " Plug 'michaeljsmith/vim-indent-object'
 Plug 'chrisbra/matchit'                 " 增强匹配 (%) (IdeaVim中可匹配HTML标签/if-else等)
-Plug 'unblevable/quick-scope'           " 高亮每个单词中唯一的字符
+" Plug 'unblevable/quick-scope'           " 高亮每个单词中唯一的字符
 " Plug 'liuchengxu/vim-which-key'         " 实时显示组合键
 
 " 其他插件
