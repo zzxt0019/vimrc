@@ -144,7 +144,7 @@ if has("ide")  " ideavim bug 类型为string
 endif
 
 " quick-scope 只在f, F, t, T时显示
-let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+let g:qs_highlight_on_keys = ['f', 'F']
 
 """"""""""""""""""""""""""""""
 " => GVim
