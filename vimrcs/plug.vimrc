@@ -1,4 +1,3 @@
-let g:plug_url_format='https://github.com/%s.git'
 call plug#begin(g:VimrcPath.'/plugged')
 " 中文文档
 Plug 'yianwillis/vimcdoc'

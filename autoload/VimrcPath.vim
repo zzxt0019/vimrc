@@ -1,4 +1,4 @@
-function! vimrcpath#VimrcPath()
+function! VimrcPath#VimrcPath()
     let l:path = $MYVIMRC
     let l:split = '/'
     if match(l:path, l:split) == -1
