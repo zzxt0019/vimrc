@@ -56,7 +56,7 @@
     " 可视模式直接搜索当前选择内容
     xnoremap  <silent> /  <esc>:call Vsearch('/')<cr>
     xnoremap  <silent> ?  <esc>:call Vsearch('?')<cr>
-    function Vsearch(search)
+    function! Vsearch(search)
         let l:temp = @"
         normal! gvy
         let @/ = @"
@@ -74,8 +74,18 @@
     nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
     if has("ide")  " ideavim
         " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次
-        nnoremap  <leader>/  /e11808e88edc581b56b0191fecfed368<cr>:let @/ = ""<cr>
+        nnoremap  <leader>/  <esc>:call IdeaClearSearch()<cr>
     endif
+    function! IdeaClearSearch()
+        let s:temp = g:highlightedyank_highlight_duration
+        let g:highlightedyank_highlight_duration = "0"
+        norm "/yl
+        let @/ = "/".@/."<cr>"
+        norm @/N
+        let @/ = ""
+        norm /<esc>
+        let g:highlightedyank_highlight_duration = s:temp
+    endfunction
 
 " ---------- 功能映射 ----------
 
