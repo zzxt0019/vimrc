@@ -19,7 +19,7 @@ autocmd FocusGained,BufEnter * checktime
 " 不显示默认启动信息
 set shortmess+=I
 
-if has("clipboard")
+if has("clipboard") || has("ide")
     " 系统剪切板
     set clipboard^=unnamed,unnamedplus
     " 启用鼠标
