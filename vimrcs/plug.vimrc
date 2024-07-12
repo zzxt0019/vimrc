@@ -1,4 +1,4 @@
-call plug#begin(g:VimrcPath.'/plugged')
+call plug#begin()
 " 中文文档
 Plug 'yianwillis/vimcdoc'
 
