@@ -19,11 +19,12 @@ autocmd FocusGained,BufEnter * checktime
 " 不显示默认启动信息
 set shortmess+=I
 
-" 系统剪切板
-set clipboard^=unnamed,unnamedplus
-
-" 启用鼠标
-set mouse+=a
+if has("clipboard")
+    " 系统剪切板
+    set clipboard^=unnamed,unnamedplus
+    " 启用鼠标
+    set mouse+=a
+endif
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => 用户界面
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
