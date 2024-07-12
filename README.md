@@ -1,5 +1,7 @@
 ## 结构说明
 
+- ***`main`***可用做自定义入口文件, 已添加`.gitignore`, ***需手动创建***, 用于修改默认环境
+- `vimrc`默认的入口文件
 - `vimrcs/init.vimrc` 初始配置
 - ***`vimrcs/env.vimrc`***本地环境文件, 已添加`.gitignore`, ***需要手动创建***, 将`vimrcs/init.vimrc`中的内容复制过去再修改
 - `vimrcs/plug.vimrc`插件配置
@@ -45,12 +47,13 @@
        git clone https://github.com/zzxt0019/vimrc.git .vimx
        ~~~
 
-    2. 修改`vimrc`, 以便其他配置也可以从`~/.vimx/`中读取
+    2. 创建`main`, 以便其他配置也可以从`~/.vimx/`中读取
 
-       在`vimrcs/env.vimrc`中添加
+       在`main`中添加(`.gitignore`中已添加`main`)
 
        ~~~vimscript
        set rtp+=~/.vimx/
+       source vimrc
        ~~~
 
     3. 修改`vim-plug`存储路径(可以不改, 不改的话默认存储到`~/.vim/plugged`)
@@ -61,14 +64,14 @@
        let g:vim_plug_path="~/.vim/plugged"
        ~~~
 
-    4. 创建`vimx`命令为`vim -u ~/.vimx/vimrc`
+    4. 创建`vimx`命令为`vim -u ~/.vimx/main`
 
        - 第1种方法, 创建别名
 
          修改`~/.bashrc`, 添加一行
 
          ~~~bash
-         alias vimx='vim -u ~/.vimx/vimrc'
+         alias vimx='vim -u ~/.vimx/main'
          ~~~
 
          重新加载配置文件
@@ -83,7 +86,7 @@
 
          ~~~vimx
          #!/bin/bash
-         exec vim -u ~/.vimx/vimrc "$@"
+         exec vim -u ~/.vimx/main "$@"
          ~~~
 
          修改`vimx`权限
