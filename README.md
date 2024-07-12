@@ -53,7 +53,7 @@
 
        ~~~vimscript
        set rtp+=~/.vimx/
-       source vimrc
+       ru vimrc
        ~~~
 
     3. 修改`vim-plug`存储路径(可以不改, 不改的话默认存储到`~/.vim/plugged`)
