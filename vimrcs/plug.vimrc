@@ -1,4 +1,8 @@
-call plug#begin()
+if g:vim_plug_path == ""
+    call plug#begin()
+else
+    call plug#begin(g:vim_plug_path)
+endif
 " 中文文档
 Plug 'yianwillis/vimcdoc'
 
@@ -31,8 +35,7 @@ Plug 'tpope/vim-repeat'                 " tpope的点扩展
 Plug 'kana/vim-textobj-user'            " 自定义文本对象 (vim-textobj-entire前置插件)
 Plug 'vim-airline/vim-airline'          " 状态栏
 Plug 'vim-airline/vim-airline-themes'   " 状态栏主题
-Plug 'junegunn/fzf',                    " fzf
-     \ { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf',{'do':{->fzf#install()}}
 Plug 'junegunn/fzf.vim'                 " fzf
 Plug 'mhinz/vim-startify'               " 启动页面
 call plug#end()

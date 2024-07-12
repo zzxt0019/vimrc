@@ -138,7 +138,7 @@ let NERDTreeChDirMode = 2
 let g:EasyMotion_smartcase = 1
 
 " argtextobj ideavim 泛型
-let g:argtextobj_pairs="(:),{:},<:>"
+let g:argtextobj_pairs = "(:),{:},<:>"
 
 " highlightedyank显示时间
 let g:highlightedyank_highlight_duration = 2000
@@ -159,13 +159,9 @@ if has("gui_running") && (has("win64") || has("win32"))
     \'\%x01\|\%x0a\|\%x0a\|\%xff\|\%xfe', '', 'g'),
     \'=.*$'), 1))/10
   if dpi > 10
-    let &guifont="Consolas:h".dpi
+    let &guifont = "Consolas:h".dpi
   endif
 
   set columns=120 " 设置宽度
   set lines=30 " 设置高度
 endif
-
-" 自定义参数
-let g:linux_shell = 0  " 当前是运维环境
-let g:hhkb = 1  " 当前使用hhkb

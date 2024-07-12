@@ -1,7 +1,7 @@
 " ========== leader键 ===========
 
-    let g:mapleader="'"
-    nmap '' '|xmap '' '|omap '' '
+    let g:mapleader = "'"
+    map '' '
 
 " ---------- leader键 ----------- 
 
@@ -71,10 +71,10 @@
     endif
 
     " 清空搜索
-    nnoremap  <silent> <leader>/  <esc>:let @/=""<cr>
+    nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
     if has("ide")  " ideavim
         " :s匹配后清除模式寄存器无效, (同时<silent>不可用), 改为先用/搜索一次
-        nnoremap  <leader>/  /e11808e88edc581b56b0191fecfed368<cr>:let @/=""<cr>
+        nnoremap  <leader>/  /e11808e88edc581b56b0191fecfed368<cr>:let @/ = ""<cr>
     endif
 
 " ---------- 功能映射 ----------
