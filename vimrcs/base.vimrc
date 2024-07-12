@@ -137,6 +137,9 @@ let NERDTreeChDirMode = 2
 " easymotion智能大小写
 let g:EasyMotion_smartcase = 1
 
+" argtextobj ideavim 泛型
+let g:argtextobj_pairs="(:),{:},<:>"
+
 " highlightedyank显示时间
 let g:highlightedyank_highlight_duration = 2000
 if has("ide")  " ideavim bug 类型为string

@@ -46,6 +46,7 @@ command! Stop call IdeaVimAction('Stop')
 command! Terminal call IdeaVimAction('ActivateTerminalToolWindow')
 " MavenReload 重新加载maven
 command! MavenReload call IdeaVimAction('Maven.Reimport Maven.UpdateFolders')
+command! Git call IdeaVimAction('Git.Menu')
 " Vim 关闭ideavim
 command! Vim call IdeaVimAction('VimPluginToggle')
 
