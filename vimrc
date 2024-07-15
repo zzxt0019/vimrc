@@ -1,5 +1,5 @@
-runtime vimrcs/init.vimrc
-runtime vimrcs/env.vimrc
-runtime vimrcs/plug.vimrc
-runtime vimrcs/base.vimrc
-runtime vimrcs/mapping.vimrc
+runtime env/default.vim
+runtime env/local.vim
+runtime vimrcs/plugin.vim
+runtime vimrcs/basic.vim
+runtime vimrcs/mapping.vim

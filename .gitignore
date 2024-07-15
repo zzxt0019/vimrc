@@ -1,4 +1,4 @@
-plugged
 .idea
-vimrcs/env.vimrc
+plugged
+env/local.vim
 main

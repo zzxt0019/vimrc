@@ -1,6 +1,6 @@
-source ~/vimfiles/vimrcs/init.vimrc
-source ~/vimfiles/vimrcs/env.vimrc
-source ~/vimfiles/vimrcs/plug.vimrc
-source ~/vimfiles/vimrcs/base.vimrc
-source ~/vimfiles/vimrcs/mapping.vimrc
-source ~/vimfiles/vimrcs/ideavim.vimrc
+source ~/vimfiles/env/default.vim
+source ~/vimfiles/env/local.vim
+source ~/vimfiles/vimrcs/plugin.vim
+source ~/vimfiles/vimrcs/basic.vim
+source ~/vimfiles/vimrcs/mapping.vim
+source ~/vimfiles/vimrcs/ideavim.vim

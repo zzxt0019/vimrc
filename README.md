@@ -2,12 +2,12 @@
 
 - ***`main`***可用做自定义入口文件, 已添加`.gitignore`, ***需手动创建***, 用于修改默认环境
 - `vimrc`默认的入口文件
-- `vimrcs/init.vimrc` 初始配置
-- ***`vimrcs/env.vimrc`***本地环境文件, 已添加`.gitignore`, ***需要手动创建***, 将`vimrcs/init.vimrc`中的内容复制过去再修改
-- `vimrcs/plug.vimrc`插件配置
-- `vimrcs/base.vimrc`基础配置
-- `vimrc/mapping.vimrc`映射配置
-- `vimrc/ideavim.vimrc`IdeaVim特殊配置
+- `env/default.vim` 默认环境配置
+- ***`env/local.vimrc`***本地环境文件, 已添加`.gitignore`, ***需要手动创建***, 将`env/default.vim`中的内容复制过去再修改
+- `vimrcs/plugin.vim`插件配置
+- `vimrcs/basic.vim`基础配置
+- `vimrcs/mapping.vim`映射配置
+- `vimrcs/ideavim.vim`IdeaVim特殊配置
 
 ## Vim配置
 
@@ -58,7 +58,7 @@
 
     3. 修改`vim-plug`存储路径(可以不改, 不改的话默认存储到`~/.vim/plugged`)
 
-       在`vimrcs/env.vimrc`中修改
+       在`env/env.vim`中修改
 
        ~~~vimscript
        let g:vim_plug_path="~/.vim/plugged"
