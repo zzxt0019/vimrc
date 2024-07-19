@@ -26,7 +26,10 @@ Plug 'machakann/vim-highlightedyank'    " 复制高亮
 Plug 'dbakker/vim-paragraph-motion'     " 大括号增强 (只含有空格的行)
 Plug 'michaeljsmith/vim-indent-object'  " 缩进文本对象 [text-objects] ii当前 ai包含上一行 aI包含上下
 Plug 'chrisbra/matchit'                 " 百分号增强 (自定义匹配内容, IdeaVim中默认可匹配 HTML标签/if-else 等)
-" Plug 'unblevable/quick-scope'           " 高亮每个单词中唯一的字符
+Plug 'unblevable/quick-scope'           " 高亮每个单词中唯一的字符
+if has("ide")
+    set quickscope
+endif
 " Plug 'liuchengxu/vim-which-key'         " 实时显示组合键
 
 " 其他插件
