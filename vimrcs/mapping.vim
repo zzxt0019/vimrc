@@ -81,15 +81,18 @@
 
 " ========== 插件映射 ==========
 
-    " NERDTree映射
+    " NERDTree 映射
     nnoremap  <leader>nn  <esc>:NERDTree 
     nnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
     nnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
     
-    " easymotion映射
-    let g:EasyMotion_do_mapping = 0 " 禁用默认映射
+    " easymotion 映射
     map  <leader>f  <Plug>(easymotion-bd-f)
     map  <leader>t  <Plug>(easymotion-bd-t)
+
+    " quickscope 禁止操作符等待时高亮
+    onoremap f f
+    onoremap F F
 
     " fzf 映射搜索
     command! Nmaps call fzf#vim#maps('n', 0)
@@ -101,17 +104,6 @@
     command! Omaps call fzf#vim#maps('o', 0)
     command! Tmaps call fzf#vim#maps('t', 0)
     command! Lmaps call fzf#vim#maps('l', 0)
-
-    " multi-cursors
-    let g:multi_cursor_use_default_mapping = 0
-    let g:multi_cursor_start_word_key      = '<A-n>'
-    let g:multi_cursor_select_all_word_key = '<Nop>'
-    let g:multi_cursor_start_key           = 'g<A-n>'
-    let g:multi_cursor_select_all_key      = '<Nop>'
-    let g:multi_cursor_next_key            = '<A-n>'
-    let g:multi_cursor_prev_key            = '<A-p>'
-    let g:multi_cursor_skip_key            = '<A-x>'
-    let g:multi_cursor_quit_key            = '<Esc>'
 
 " ---------- 插件映射 ----------
 " ========== 清除选择模式 ==========

@@ -135,20 +135,33 @@ set laststatus=2
 " NERDTree切换目录时自动切换vim根目录
 let NERDTreeChDirMode = 2
 
-" easymotion智能大小写
+" easymotion 智能大小写
 let g:EasyMotion_smartcase = 1
+" easymotion 禁用默认映射
+let g:EasyMotion_do_mapping = 0
 
 " argtextobj ideavim 泛型
 let g:argtextobj_pairs = "(:),{:},<:>"
 
-" highlightedyank显示时间
+" highlightedyank 显示时间
 let g:highlightedyank_highlight_duration = 2000
 if has("ide")  " ideavim bug 类型为string
     let g:highlightedyank_highlight_duration = g:highlightedyank_highlight_duration.""
 endif
 
-" quick-scope 只在f, F, t, T时显示
+" quickscope 只在f, F时显示
 let g:qs_highlight_on_keys = ['f', 'F']
+
+" multi-cursors
+let g:multi_cursor_use_default_mapping = 0
+let g:multi_cursor_start_word_key      = '<A-n>'
+let g:multi_cursor_select_all_word_key = '<Nop>'
+let g:multi_cursor_start_key           = 'g<A-n>'
+let g:multi_cursor_select_all_key      = '<Nop>'
+let g:multi_cursor_next_key            = '<A-n>'
+let g:multi_cursor_prev_key            = '<A-p>'
+let g:multi_cursor_skip_key            = '<A-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
 
 """"""""""""""""""""""""""""""
 " => GVim
