@@ -7,7 +7,7 @@
 
 " ========== 方向键映射 ==========
 
-    if g:hhkb == 0 && g:linux_shell == 0
+    if g:env_keyboard_60 == 0 && g:env_production == 0
         noremap <left>  <nop>|inoremap <left>  <nop>|cnoremap <left>  <nop>
         noremap <right> <nop>|inoremap <right> <nop>|cnoremap <right> <nop>
         noremap <up>    <nop>|inoremap <up>    <nop>|cnoremap <up>    <nop>
@@ -64,7 +64,7 @@
         execute 'normal! '.a:search.'<cr>N'
     endfunction
 
-    if g:hhkb == 0
+    if g:env_keyboard_60 == 0
         " Insert模式 jk 退出
         inoremap  jk  <esc>
         inoremap  jj  j

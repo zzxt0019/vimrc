@@ -1,8 +1,7 @@
-if g:vim_plug_path == ""
-    call plug#begin()
-else
-    call plug#begin(g:vim_plug_path)
-endif
+" call plug#begin() 
+"   or
+" call plug#begin(g:env_vim_plug_path)
+execute 'call plug#begin('.(g:env_vim_plug_path==''?'':g:env_vim_plug_path).')'
 " 中文文档
 Plug 'yianwillis/vimcdoc'
 

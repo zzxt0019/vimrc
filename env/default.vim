@@ -1,7 +1,9 @@
 " 自定义参数
-" 1: 当前是运维环境, 0: 当前不是开发环境
-let g:linux_shell = 0
-" 1: hhkb键盘, 0: 普通键盘
-let g:hhkb = 0
-" vim-plug存储位置(""为默认)
-let g:vim_plug_path = ""
+" 0: 当前是开发环境(本地)
+" 1: 当前是生产环境(服务器 默认has("clipboard")为0)
+let g:env_production = 0
+" 0: 普通键盘
+" 1: 60键键盘(hhkb)
+let g:env_keyboard_60 = 0
+" vim-plug存储位置(""会存到默认位置)
+let g:env_vim_plug_path = ""
