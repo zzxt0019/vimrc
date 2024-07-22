@@ -93,6 +93,8 @@
     " quickscope 禁止操作符等待时高亮
     onoremap f f
     onoremap F F
+    onoremap t t
+    onoremap T T
 
     " fzf 映射搜索
     command! Nmaps call fzf#vim#maps('n', 0)

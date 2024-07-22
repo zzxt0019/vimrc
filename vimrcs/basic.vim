@@ -149,8 +149,8 @@ if has("ide")  " ideavim bug 类型为string
     let g:highlightedyank_highlight_duration = g:highlightedyank_highlight_duration.""
 endif
 
-" quickscope 只在f, F时显示
-let g:qs_highlight_on_keys = ['f', 'F']
+" quickscope 只在f, F, t, T时显示
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " multi-cursors
 let g:multi_cursor_use_default_mapping = 0
