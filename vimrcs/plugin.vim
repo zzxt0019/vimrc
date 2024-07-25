@@ -1,7 +1,7 @@
 " call plug#begin() 
 "   or
 " call plug#begin(g:env_vim_plug_path)
-execute 'call plug#begin('.(g:env_vim_plug_path==''?'':g:env_vim_plug_path).')'
+execute 'call plug#begin('.(g:env_vim_plug_path==''?'':'"'.g:env_vim_plug_path.'"').')'
 " 中文文档
 Plug 'yianwillis/vimcdoc'
 
