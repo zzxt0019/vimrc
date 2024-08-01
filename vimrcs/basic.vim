@@ -61,18 +61,23 @@ set ignorecase smartcase hlsearch incsearch
 " Don't redraw while executing macros (good performance config)
 set lazyredraw
 
+" 正则表达式引擎
+set regexpengine=0
+
+" :substitute 设置默认flag为g
+set gdefault
+
+" <c-a>和<c-x> 处理数字格式(二进制, 十六进制, 无符号数)
+set nrformats=bin,hex,unsigned
+
 " 取消提示音
-set noerrorbells 
-set visualbell
+set noerrorbells visualbell
 autocmd VimEnter * set t_vb=
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => 颜色字体
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 语法高亮
 syntax enable
-
-" 正则表达式引擎
-set regexpengine=0
 
 " Enable 256 colors palette in Gnome Terminal
 if $COLORTERM == 'gnome-terminal'
@@ -97,7 +102,7 @@ endif
 set encoding=utf8
 
 " Use Unix as the standard file type
-set ffs=unix,dos,mac
+set fileformats=unix,dos,mac
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => 备份文件
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -112,13 +117,9 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
-
 " Linebreak on 500 characters
-set lbr
-set tw=500
+set linebreak
+set textwidth=500
 
 set autoindent smartindent
 
