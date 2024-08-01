@@ -30,6 +30,9 @@ if has("ide")
     set quickscope
 endif
 " Plug 'liuchengxu/vim-which-key'         " 实时显示组合键
+" if has("ide")
+"     set which-key
+" endif
 
 " 其他插件
 Plug 'ZSaberLv0/vim-easymotion-chs'     " easymotion中文扩展

@@ -8,14 +8,20 @@ let g:startify_lists = [
       \ ]
 let g:startify_files_number = 5
 let g:startify_commands = [
-      \ { 'n': ['New Typed Buffer', 'call StartifyNewTypedBuffer()'] },
-      \ { 'p': ['New Past Buffer', 'call StartifyNewPastBuffer()'] },
+      \ { 'n': ['new Typed Buffer: 输入文件类型', 'call StartifyNewTypedBuffer()'] },
+      \ { 'p': ['new Pasted Buffer: 粘贴剪切板内容', 'call StartifyNewPastedBuffer()'] },
+      \ { 'b': ['reload','call StartifyReload()'] },
       \ ]
 function! StartifyNewTypedBuffer() 
     enew
     execute 'set filetype='.input('filetype=')
 endfunction
-function! StartifyNewPastBuffer()
+function! StartifyNewPastedBuffer()
     enew
     execute "norm i\<s-insert>\<esc>"
 endfunction
+function! StartifyReload()
+    let g:startify_custom_header = ['test']
+    Startify
+endfunction
+
