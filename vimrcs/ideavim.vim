@@ -1,6 +1,18 @@
+" ideavim额外的set配置
+"
+" set ideacopypreprocess
+" set ideaglobalmode
+set ideajoin
+" set ideamarks
+" set idearefactormode=
+" set ideastatusicon=
+" set ideawrite=
+" set lookupkeys=
 set trackactionids
+" set visualdelay=
 
-
+" 自定义map
+"
 map <space> <nop>|xmap <space> <nop>|omap <space> <nop>
 " 重命名 
 map <space>r <Action>(RenameElement)
@@ -23,15 +35,9 @@ map <c-n> <Action>(GotoImplementation)
 " 方法跳转到父类定义
 map <c-m> <Action>(GotoSuperMethod)
 
-" idea更好的实现 
-map <c-o>    <Action>(Back)
-map <c-i>    <Action>(Forward)
-map J        <Action>(EditorJoinLines)
-map <c-r>    <Action>($Redo)
 
-
-" 通过命令模式实现一些不常用的功能(必须大写开头)
-
+" 自定义command
+"
 " Reload 重新加载ideavimrc
 command! Reload call IdeaVimAction('IdeaVim.ReloadVimRc.reload')
 " Run
