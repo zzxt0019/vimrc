@@ -30,6 +30,8 @@ map <space>l <Action>(ReformatCode)
 map <space>t <Action>(SurroundWith)
 " 提示 a-enter
 map <space>i <Action>(ShowIntentionActions)
+" 全局搜索 shift-shift
+map <space>s <Action>(SearchEverywhere)
 " 方法跳转到子类实现
 map <c-n> <Action>(GotoImplementation)
 " 方法跳转到父类定义
