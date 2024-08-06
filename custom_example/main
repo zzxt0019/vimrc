@@ -1,2 +1,2 @@
 set rtp+=~/.vimx/
-source vimrc
+runtime vimrc
