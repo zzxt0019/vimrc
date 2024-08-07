@@ -8,11 +8,6 @@
 " ========== 方向键映射 ==========
 
     if g:env_keyboard_60 == 0 && g:env_production == 0
-        noremap <left>  <nop>|inoremap <left>  <nop>|cnoremap <left>  <nop>
-        noremap <right> <nop>|inoremap <right> <nop>|cnoremap <right> <nop>
-        noremap <up>    <nop>|inoremap <up>    <nop>|cnoremap <up>    <nop>
-        noremap <down>  <nop>|inoremap <down>  <nop>|cnoremap <down>  <nop>
-
         noremap <c-h>  <left>|inoremap <c-h>  <left>|cnoremap <c-h>  <left>
         noremap <c-j>  <down>|inoremap <c-j>  <down>|cnoremap <c-j>  <down>
         noremap <c-k>    <up>|inoremap <c-k>    <up>|cnoremap <c-k>    <up>
