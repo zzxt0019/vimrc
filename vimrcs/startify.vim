@@ -10,7 +10,8 @@ let g:startify_files_number = 5
 let g:startify_commands = [
       \ { 'n': ['new Typed Buffer: 输入文件类型', 'call StartifyNewTypedBuffer()'] },
       \ { 'p': ['new Pasted Buffer: 粘贴剪切板内容', 'call StartifyNewPastedBuffer()'] },
-      \ { 'b': ['reload','call StartifyReload()'] },
+      \ { 'r': ['reload Startify','call StartifyReload()'] },
+      \ { 'vp': ['update windows环境下 更新VimPlug','call StartifyUpdateVimPlug()'] },
       \ ]
 function! StartifyNewTypedBuffer() 
     enew
@@ -23,5 +24,12 @@ endfunction
 function! StartifyReload()
     let g:startify_custom_header = ['test']
     Startify
+endfunction
+function! StartifyUpdateVimPlug()
+    execute '!powershell -Command "iwr -useb '.
+    \ 'https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim  '.
+    \ '|` ni $HOME/vimfiles/autoload/plug.vim -Force"'.
+    \ ''
+    execute ''
 endfunction
 
