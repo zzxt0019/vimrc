@@ -1,3 +1,5 @@
 .idea
 plugged
 custom
+autoload/plug.vim.old
+
