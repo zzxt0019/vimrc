@@ -6,7 +6,13 @@ set nocompatible
 
 " Sets how many lines of history VIM has to remember
 set history=500
+
+" 映射的超时时间
+set timeout
 set timeoutlen=1500
+" 键码的超时时间 解决部分终端由转义引起的"卡键"现象
+set ttimeout
+set ttimeoutlen=10
 
 " Enable filetype plugins
 filetype plugin on

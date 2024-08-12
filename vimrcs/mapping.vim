@@ -24,6 +24,10 @@
     noremap  x  "_x
     noremap  X  "_X
 
+    " 水平移动时保留光标
+    xnoremap <  <gv
+    xnoremap >  >gv
+
     " @/为空时n/N搜索 => 不报错
     if !has("ide")  " ideavim不存在这个问题
         noremap  <silent> n  :call CommandN('n')<cr>
