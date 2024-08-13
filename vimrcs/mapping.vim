@@ -1,7 +1,8 @@
 " ========== leader键 ===========
 
     let g:mapleader = "'"
-    map '' '
+    map <leader><leader> <leader>
+    noremap <leader> <nop>
 
 " ---------- leader键 ----------- 
 
