@@ -180,7 +180,9 @@ if has("gui_running") && (has("win64") || has("win32"))
     \'\%x01\|\%x0a\|\%x0a\|\%xff\|\%xfe', '', 'g'),
     \'=.*$'), 1))/10
   if dpi > 10
-    let &guifont = "Consolas:h".dpi
+    let &guifont = 'Consolas:h'.dpi
+  else
+    let &guifont = 'Consolas:h10'
   endif
 
   set columns=120 " 设置宽度
