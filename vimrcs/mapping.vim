@@ -79,7 +79,6 @@ function! VisualSearch(search)
     normal! gvy
     let @/ = @"
     let @" = l:temp
-    execute 'normal! '.a:search.'
-N'
+    execute 'normal! '.a:search.'N'
 endfunction
 " ---------- Function 结束 ----------
