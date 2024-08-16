@@ -1,7 +1,43 @@
-" call plug#begin() 
-"   or
-" call plug#begin(g:env_vim_plug_path)
-execute 'call plug#begin('.(exists("g:env_vim_plug_path") && g:env_vim_plug_path != ''?"'".g:env_vim_plug_path."'":'').')'
+" 插件配置
+" ========== 插件加载前配置 开始 ==========
+" << NERDTree >>
+" 切换目录时自动切换vim根目录
+let NERDTreeChDirMode = 2
+
+" << EasyMotion >>
+" 智能大小写
+let g:EasyMotion_smartcase = 1
+" 禁用默认映射
+let g:EasyMotion_do_mapping = 0
+
+" << argtextobj >>
+" ideavim 泛型
+let g:argtextobj_pairs = '(:),{:},<:>'
+
+" << highlightedyank >>
+" 显示时间
+let g:highlightedyank_highlight_duration = 2000
+if has('ide')  " 注: ideavim 类型为 string
+    let g:highlightedyank_highlight_duration = ''.g:highlightedyank_highlight_duration
+endif
+
+" << quick-scope >>
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+
+" << multi-cursors >>
+let g:multi_cursor_use_default_mapping = 0
+let g:multi_cursor_start_word_key      = '<A-n>'
+let g:multi_cursor_select_all_word_key = '<Nop>'
+let g:multi_cursor_start_key           = 'g<A-n>'
+let g:multi_cursor_select_all_key      = '<Nop>'
+let g:multi_cursor_next_key            = '<A-n>'
+let g:multi_cursor_prev_key            = '<A-p>'
+let g:multi_cursor_skip_key            = '<A-x>'
+let g:multi_cursor_quit_key            = '<Esc>'
+" ---------- 插件加载前配置 结束 ----------
+
+" ========== vim-plug 启用插件 开始 ==========
+execute 'call plug#begin('.(exists("g:custom_config_vim_plug_path") && g:custom_config_vim_plug_path != ''?"'".g:custom_config_vim_plug_path."'":'').')'
 " 中文文档
 Plug 'yianwillis/vimcdoc'
 
@@ -44,3 +80,45 @@ Plug 'junegunn/fzf',{'do':{->fzf#install()}}
 Plug 'junegunn/fzf.vim'                 " fzf
 Plug 'mhinz/vim-startify'               " 启动页面
 call plug#end()
+" ---------- vim-plug 启用插件 结束 ----------
+
+" ========== 插件加载后配置 开始 ==========
+"
+" colorscheme
+try
+  colorscheme onedark
+  set background=dark
+catch
+endtry
+
+" << NERDTree >>
+nnoremap  <leader>nn  <esc>:NERDTree
+nnoremap  <leader>nf  <esc>:NERDTreeFind<cr>
+nnoremap  <leader>nt  <esc>:NERDTreeToggle<cr>
+
+" << EasyMotion >>
+map  <leader>f  <Plug>(easymotion-bd-f)
+map  <leader>t  <Plug>(easymotion-bd-t)
+
+" << quickscope >>
+" 禁止操作符等待时高亮
+onoremap f f
+onoremap F F
+onoremap t t
+onoremap T T
+
+" << fzf >>
+" 映射搜索
+command! Nmaps call fzf#vim#maps('n', 0)
+command! Imaps call fzf#vim#maps('i', 0)
+command! Cmaps call fzf#vim#maps('c', 0)
+command! Vmaps call fzf#vim#maps('v', 0)
+command! Xmaps call fzf#vim#maps('x', 0)
+command! Smaps call fzf#vim#maps('s', 0)
+command! Omaps call fzf#vim#maps('o', 0)
+command! Tmaps call fzf#vim#maps('t', 0)
+command! Lmaps call fzf#vim#maps('l', 0)
+
+" << startify >>
+runtime vimrcs/startify.vim
+" ---------- 插件加载后配置 结束 ----------

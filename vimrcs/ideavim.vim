@@ -1,4 +1,5 @@
-" ideavim额外的set配置
+" IdeaVim额外的配置
+" ========== ideavim额外的set配置 结束 ==========
 "
 " set ideacopypreprocess
 " set ideaglobalmode
@@ -10,11 +11,13 @@ set ideajoin
 " set lookupkeys=
 set trackactionids
 " set visualdelay=
+" ---------- ideavim额外的set配置 结束 ----------
 
-" 自定义map
+" ========== 自定义映射Action 开始 ========== 
 "
-map <space> <nop>|xmap <space> <nop>|omap <space> <nop>
-" 重命名 
+" 映射Action启用<space>作为前缀
+map <space> <nop>
+" 重命名
 map <space>r <Action>(RenameElement)
 " 引入变量 
 map <space>v <Action>(IntroduceVariable)
@@ -36,9 +39,10 @@ map <space>s <Action>(SearchEverywhere)
 map <c-n> <Action>(GotoImplementation)
 " 方法跳转到父类定义
 map <c-m> <Action>(GotoSuperMethod)
+" ---------- 自定义映射Action 结束 ----------
 
 
-" 自定义command
+" ========== 自定义命令Action 开始 ==========
 "
 " Reload 重新加载ideavimrc
 command! Reload call IdeaVimAction('IdeaVim.ReloadVimRc.reload')
@@ -57,10 +61,14 @@ command! MavenReload call IdeaVimAction('Maven.Reimport Maven.UpdateFolders')
 command! Git call IdeaVimAction('Git.Menu')
 " Vim 关闭ideavim
 command! Vim call IdeaVimAction('VimPluginToggle')
+" ---------- 自定义命令Action 结束 ----------
 
+" ========== Function ========== 
+" 执行IdeaVimAction 多个命令根据<space>切分
 function! IdeaVimAction(actions)
     let l:actions = split(a:actions, ' ') 
     for action in l:actions
         execute 'action '.l:action
     endfor
 endfunction
+" ---------- Function ----------

@@ -1,3 +1,4 @@
+" startify插件配置
 let g:startify_custom_header = ['']
 let g:startify_lists = [
       \ { 'type': 'commands', },
@@ -21,7 +22,7 @@ function! StartifyNewPastedBuffer()
     execute "norm i\<s-insert>\<esc>"
 endfunction
 function! StartifyReload()
-    let g:startify_custom_header = ['test']
+    let g:startify_custom_header = ['']
     Startify
 endfunction
 

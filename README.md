@@ -8,7 +8,7 @@
   - `mapping.vim` 映射配置
   - `ideavim.vim` IdeaVim的特殊配置
 - `custom_example`自定义配置样例
-  - `env.vim` 环境配置
+  - `config.vim` 自定义配置
   - `main` Linux自定义入口样例
 - `custom`自定义配置, 需将`custom_example`**复制**并修改其中自定义内容
 
@@ -23,14 +23,18 @@
     执行命令:
 
     ~~~bat
-    git clone https://github.com/zzxt0019/vimrc.git vimfiles
+    git clone --depth 1 https://github.com/zzxt0019/vimrc.git vimfiles
     ~~~
 
     复制`custom_example`到`custom`
 
   - `ideavim`
 
-    将`C:/Users/username/vimfiles/.ideavimrc`复制到`C:/Users/username/.ideavimrc`
+    - 将`C:/Users/username/vimfiles/.ideavimrc`复制到`C:/Users/username/.ideavimrc`
+    - 或者将当前的`.ideavimrc`内容修改为
+      ~~~vimscript
+      source ~/vimfiles/.ideavimrc
+      ~~~
 
 - Linux
 
@@ -38,7 +42,7 @@
 
     ~~~shell
     cd ~
-    git clone https://github.com/zzxt0019/vimrc.git .vim
+    git clone --depth 1 https://github.com/zzxt0019/vimrc.git .vim
     ~~~
 
   - 服务器root
@@ -49,7 +53,7 @@
 
        ~~~shell
        cd ~
-       git clone https://github.com/zzxt0019/vimrc.git .vimx
+       git clone --depth 1 https://github.com/zzxt0019/vimrc.git .vimx
        ~~~
 
     2. 复制`custom_example`到`custom`, 并修改`main`
@@ -61,10 +65,10 @@
        
     3. 修改`vim-plug`存储路径(可以不改, 不改的话默认存储到`~/.vim/plugged`)
 
-       在`env/env.vim`中修改
+       在`custom/config.vim`中修改
 
        ~~~vimscript
-       let g:vim_plug_path="~/.vim/plugged"
+       let g:vim_config_plug_path="~/.vim/plugged"
        ~~~
     
     4. 创建`vimx`命令为`vim -u ~/.vimx/main`
