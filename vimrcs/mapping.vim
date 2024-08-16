@@ -30,13 +30,13 @@
     xnoremap >  >gv
 
     " @/为空时n/N搜索 => 不报错
-    if !has("ide")  " ideavim不存在这个问题
+    if !has('ide')  " ideavim不存在这个问题
         noremap  <silent> n  :call CommandN('n')<cr>
         noremap  <silent> N  :call CommandN('N')<cr>
     endif
 
     function! CommandN(n)
-        if @/ != "" && ( a:n == 'n' || a:n == 'N' )
+        if @/ != '' && ( a:n == 'n' || a:n == 'N' )
             try
                 execute 'norm! '.a:n
             catch
@@ -71,10 +71,10 @@
     endif
 
     " 清空搜索
-    nnoremap  <silent> <leader>/  <esc>:let @/ = ""<cr>
-    if has("ide")  " ideavim
+    nnoremap  <silent> <leader>/  <esc>:let @/ = ''<cr>
+    if has('ide')  " ideavim
         " ideavim需要额外/<esc>, :s匹配后清除需要手动搜索一次
-        nnoremap  <leader>/  <esc>:let @/ = ""<cr>/<esc>
+        nnoremap  <leader>/  <esc>:let @/ = ''<cr>/<esc>
     endif
 
 " ---------- 功能映射 ----------

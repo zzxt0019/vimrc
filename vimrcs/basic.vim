@@ -25,7 +25,7 @@ autocmd FocusGained,BufEnter * checktime
 " 不显示默认启动信息
 set shortmess+=I
 
-if has("clipboard") || has("ide")
+if has('clipboard') || has('ide')
     " 系统剪切板
     set clipboard^=unnamed,unnamedplus
     " 启用鼠标
@@ -97,7 +97,7 @@ endtry
 set background=dark
 
 " Set extra options when running in GUI mode
-if has("gui_running")
+if has('gui_running')
     set guioptions-=T
     set guioptions-=e
     set t_Co=256
@@ -151,12 +151,12 @@ let g:EasyMotion_smartcase = 1
 let g:EasyMotion_do_mapping = 0
 
 " argtextobj ideavim 泛型
-let g:argtextobj_pairs = "(:),{:},<:>"
+let g:argtextobj_pairs = '(:),{:},<:>'
 
 " highlightedyank 显示时间
 let g:highlightedyank_highlight_duration = 2000
-if has("ide")  " ideavim bug 类型为string
-    let g:highlightedyank_highlight_duration = g:highlightedyank_highlight_duration.""
+if has('ide')  " ideavim bug 类型为string
+    let g:highlightedyank_highlight_duration = g:highlightedyank_highlight_duration.''
 endif
 
 " quickscope 只在f, F, t, T时显示
@@ -176,7 +176,7 @@ let g:multi_cursor_quit_key            = '<Esc>'
 """"""""""""""""""""""""""""""
 " => GVim
 """"""""""""""""""""""""""""""
-if has("gui_running") && (has("win64") || has("win32"))
+if has('gui_running') && (has('win64') || has('win32'))
   " 设置字体大小 "
   let dpi = str2nr(strpart(matchstr(substitute(
     \system('wmic desktopmonitor get PixelsPerXLogicalInch /value'),
