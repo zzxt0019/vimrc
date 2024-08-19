@@ -44,8 +44,8 @@ noremap L $
 map M %
 
 " 可视模式直接搜索当前选择内容
-xnoremap  <silent> /  <esc>:call VisualSearch('/')<cr>
-xnoremap  <silent> ?  <esc>:call VisualSearch('?')<cr>
+xnoremap  <silent> /  <esc>:call VisualRegSearch()<cr>/<cr>N
+xnoremap  <silent> ?  <esc>:call VisualRegSearch()<cr>?<cr>N
 
 " 清空搜索
 nnoremap  <silent> <leader>/  <esc>:let @/ = ''<cr>
@@ -74,11 +74,10 @@ function! Extension_n(n)
 endfunction
 
 " 可视模式直接搜索当前选择内容
-function! VisualSearch(search)
+function! VisualRegSearch()
     let l:temp = @"
     normal! gvy
     let @/ = @"
     let @" = l:temp
-    execute 'normal! '.a:search.'N'
 endfunction
 " ---------- Function 结束 ----------
