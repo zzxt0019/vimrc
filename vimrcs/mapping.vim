@@ -54,12 +54,15 @@ if has('ide')  " ideavim
     nnoremap  <leader>/  <esc>:let @/ = ''<cr>/<esc>
 endif
 
+let g:chinese_punctuation = 1
+
 " ---------- 功能映射 结束 ----------
 
 " ========== 清除选择模式 开始 ==========
 "
 smapclear
 " ---------- 清除选择模式 结束 ----------
+
 
 " ========== Function 开始 ==========
 "
@@ -80,4 +83,69 @@ function! VisualRegSearch()
     let @/ = @"
     let @" = l:temp
 endfunction
+
+" 中文标点
+function! ChinesePunctuation()
+    if g:chinese_punctuation == 0
+      let g:chinese_punctuation = 1
+      iunmap ！
+      iunmap ￥
+      iunmap （
+      iunmap ）
+      iunmap 【
+      iunmap 】
+      iunmap ：
+      iunmap ；
+      iunmap “ 
+      iunmap ” 
+      iunmap ‘ 
+      iunmap ’ 
+      iunmap ，
+      iunmap 。
+      iunmap 《
+      iunmap 》
+      iunmap ？
+      cunmap ！
+      cunmap ￥
+      cunmap （
+      cunmap ）
+      cunmap 【
+      cunmap 】
+      cunmap ：
+      cunmap ；
+      cunmap “ 
+      cunmap ” 
+      cunmap ‘ 
+      cunmap ’ 
+      cunmap ，
+      cunmap 。
+      cunmap 《
+      cunmap 》
+      cunmap ？
+    else
+      let g:chinese_punctuation = 0
+      nnoremap ！ !|inoremap ！ !|cnoremap ！ !
+      nnoremap ￥ $|inoremap ￥ $|cnoremap ￥ $
+      nnoremap （ (|inoremap （ (|cnoremap （ (
+      nnoremap ） )|inoremap ） )|cnoremap ） )
+      nnoremap 【 [|inoremap 【 [|cnoremap 【 [
+      nnoremap 】 ]|inoremap 】 ]|cnoremap 】 ]
+      nnoremap ： :|inoremap ： :|cnoremap ： :
+      nnoremap ； ;|inoremap ； ;|cnoremap ； ;
+      nnoremap “  "|inoremap “  "|cnoremap “ " 
+      nnoremap ”  "|inoremap ”  "|cnoremap ” " 
+      nnoremap ‘  '|inoremap ‘  '|cnoremap ‘ ' 
+      nnoremap ’  '|inoremap ’  '|cnoremap ’ ' 
+      nnoremap ， ,|inoremap ， ,|cnoremap ， ,
+      nnoremap 。 .|inoremap 。 .|cnoremap 。 .
+      nnoremap 《 <|inoremap 《 <|cnoremap 《 <
+      nnoremap 》 >|inoremap 》 >|cnoremap 》 >
+      nnoremap ？ ?|inoremap ？ ?|cnoremap ？ ?
+    endif
+endfunction
+
+call ChinesePunctuation()
+
+command! CN call ChinesePunctuation()
+
 " ---------- Function 结束 ----------
